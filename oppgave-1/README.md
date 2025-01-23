@@ -70,3 +70,7 @@ git log
 :pencil2: Sett repositoriets `remote origin` til github-repositoriet ditt, og push endringene dine.
 
 :pencil2: For å simulere en endring utenfor egen maskin, trykk på blyant-ikonet på github.com, og endre en fil. I terminalen din, skriv `git pull` for å hente ned siste endringer.
+
+---
+
+[:arrow_right: Gå til neste oppgave](../oppgave-2/README.md)

@@ -21,3 +21,7 @@ OBS: Du ønsker som regel aldri å rebase i main. Da skriver du om historikken i
 Når du står i en feature-branch, vil du i noen tilfeller skrive om commits du har sjekket inn, f.eks. ved å slå sammen commits eller endre commit-melding for en commit. Dette kan du gjøre med `git rebase` i interaktiv modus.
 
 ### Git pull --rebase
+
+---
+
+[:arrow_right: Gå til neste oppgave](../oppgave-5/README.md)

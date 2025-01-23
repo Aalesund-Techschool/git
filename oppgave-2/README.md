@@ -47,3 +47,7 @@ Når en er flere som arbeider sammen, ender man ofte opp med å jobbe i samme fi
 - Kopiere innhold fra fil 2, legge i en commit i en feature-branch
 - Merge main inn i feature-branch, resolve konflikter
 - Pushe endringer i feature-branch til remote
+
+---
+
+[:arrow_right: Gå til neste oppgave](../oppgave-3/README.md)

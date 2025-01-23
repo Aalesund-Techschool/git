@@ -12,3 +12,7 @@ Etter denne oppgaven skal du kunne å:
 
 - Opprette pull-requests
 - Legge til kommentarer og reviews
+
+---
+
+[:arrow_right: Gå til neste oppgave](../oppgave-4/README.md)
