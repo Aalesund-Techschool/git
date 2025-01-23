@@ -28,8 +28,8 @@ Det er fritt frem for å bruke den kode-editoren du selv foretrekker, men vi var
 
 Dette repositoriet har et sett med øvelser organisert i kataloger. Hver katalog inneholder en `README.md` som beskriver oppgaven.
 
-- [Oppgave 1](oppgave/oppgave-1.md)
-- [Oppgave 2](oppgave/oppgave-2.md)
+- [Oppgave 1](oppgave-1/README.md)
+- [Oppgave 2](oppgave-2/README.md)
 
 ### Symboler og ikoner du finner igjen i oppgavene
 
