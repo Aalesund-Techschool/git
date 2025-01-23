@@ -31,6 +31,7 @@ Dette repositoriet har et sett med øvelser organisert i kataloger. Hver katalog
 - [Oppgave 1](oppgave-1/README.md)
 - [Oppgave 2](oppgave-2/README.md)
 - [Oppgave 3](oppgave-3/README.md)
+- [Oppgave 4](oppgave-4/README.md)
 
 ### Symboler og ikoner du finner igjen i oppgavene
 
