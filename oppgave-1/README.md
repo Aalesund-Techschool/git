@@ -65,9 +65,21 @@ git log
 
 :bulb: Du har nå opprettet et git-repository og lagt inn første commit via kommandolinjen. Bra jobba! Nå har vi alt arbeid lokalt på egen maskin, men vi ønsker gjerne å sjekke inn koden et sentralt sted.
 
-:pencil2: Opprett et Github-repository. Har du ikke en github-konto, må du opprette dette.
+:pencil2: Opprett et Github-repository på github.com. Har du ikke en github-konto, må du opprette dette. Gå inn på din profil og velg fane "Repositories". Her vil du finne en stor grønn knapp med tittel "New"
 
-:pencil2: Sett repositoriets `remote origin` til github-repositoriet ditt, og push endringene dine.
+![Opprettelse av nytt repository](../images/nytt-repo.png)
+
+Velg et passende navn under **`Repository name`** (Forslag `techschool-git-workshop`). Ikke velg noen andre innstillinger, og trykk **`Create repository`**.
+
+Du vil komme til følgende skjermbilde, om du må de nederste instruksene (**`push an existing repository from the command line`**)
+
+![alt text](../images/opprettet-repo.png)
+
+Etter du har utført instruksene i Github, vil ha:
+
+- Satt opp ditt lokale repository til å spore et "remote repository" / "remote origin".
+- Git branchen din navnet `main` (Om du sto på branch `master` blir denne nå `main`).
+- Pushet endringene dine til remote origin
 
 :pencil2: For å simulere en endring utenfor egen maskin, trykk på blyant-ikonet på github.com, og endre en fil. I terminalen din, skriv `git pull` for å hente ned siste endringer.
 
