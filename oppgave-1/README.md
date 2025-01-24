@@ -67,13 +67,19 @@ git log
 
 :pencil2: Opprett et Github-repository på github.com. Har du ikke en github-konto, må du opprette dette. Gå inn på din profil og velg fane "Repositories". Her vil du finne en stor grønn knapp med tittel "New"
 
-![Opprettelse av nytt repository](../images/nytt-repo.png)
+<div style="text-align: center">
+  <img src="../images/nytt-repo.png" alt="Alt Text" width="400" >
+</div>
+
 
 Velg et passende navn under **`Repository name`** (Forslag `techschool-git-workshop`). Ikke velg noen andre innstillinger, og trykk **`Create repository`**.
 
 Du vil komme til følgende skjermbilde, om du må de nederste instruksene (**`push an existing repository from the command line`**)
 
-![alt text](../images/opprettet-repo.png)
+<div style="text-align: center">
+  <img src="../images/opprettet-repo.png" alt="Alt Text" width="600">
+</div>
+
 
 Etter du har utført instruksene i Github, vil ha:
 
