@@ -10,15 +10,35 @@ Etter denne oppgaven skal du kunne å:
 
 ## 2.1 - Første branch
 
+### 2.1.1 - Første commit
+
 Når en arbeider sammen, er det svært vanlig å bruke git branches. Når du lager en branch, bryter du ut i en egen gren fra hoved-branchen, der du kan arbeide fritt uten å påvirke andre sitt arbeid.
 
 :pencil2: Sjekk at du står i `main` branch (`git branch`) og sjekk deretter ut en ny branch med kommandoen `git checkout -b feature-branch-1`. Da vil du sjekke ut en ny branch med navn `feature-branch-1` som spinner ut av branchen du sto på, `main`. Nå kan du fritt arbeide i denne branchen (og pushe branchen til et remote repository) og arbeide uforstyrret.
 
-:pencil2: Kopier innhold i filen `code/copypasta/2.1.ts` og legg innholdet i `code/index.ts`. Sjekk at du ser endringene enten ved å bruke diff-verktøyet i VS Code, eller bruk `git diff`. Commit endringen i branchen din. Sjekk at finner igjen endringen i git-loggen (`git log`).
+:pencil2: Opprett en fil som heter `index.ts` i repositoriet ditt og legg følgende innhold inn i filen. Sjekk filen inn i lokalt repository med en passende commit-melding.
 
-:bulb: Når vi arbeider sammen, gjør vi gjerne endringer i brancher og merger til hovedbranchen (`main` eller `master`). Slik kan vi skille ferdig og uferdig kode, og slipper å blokkere hovedbranch fra å gå ut i produksjon.
+```ts
+export const greeting = (name: string) => {
+  console.log(`Hello ${name}`);
+};
+```
+
+### 2.1.2 - Bruk av `git diff`
+
+:pencil2: Endre innholdet i `index.ts` til. Bruk deretter `git diff` for å se hvilke endringer du har utført. Du kan også se endringene i VS Code.
+
+```ts
+export const greeting = (firstname: string, lastname: string) => {
+  console.log(`Hello ${firstname} ${lastname}`);
+};
+```
+
+:bulb: `git diff` er nyttig når du vil se en liten diff. Skal du inspisere en større diff, er det lurt å bruke verkøyet i VS Code eller tilsvarende verktøy i andre editorer/IDEer.
 
 ## 2.2 - Merging av brancher
+
+:bulb: Når vi arbeider sammen, gjør vi gjerne endringer i brancher og merger til hovedbranchen (`main` eller `master`). Slik kan vi skille ferdig og uferdig kode, og slipper å blokkere hovedbranch fra å gå ut i produksjon
 
 :bulb: Når du merger en branch, oppretter vi en egen commit i git-historikken som beskriver endringene i commitene du merger inn. Dette fungere som en bro mellom historikken i de 2 forskjellige branchene og gjør at vi får en felles historikk i branchen i merger inn i.
 
@@ -35,18 +55,19 @@ Du vil få opp et editor-vindu (f.eks. Visual Studio Code, Vi, Nano). Dette er i
 
 ## 2.3 - Konflikter
 
-Når en er flere som arbeider sammen, ender man ofte opp med å jobbe i samme fil, og kan komme til å endre de samme delene av koden. For at git skal vite hvordan endringer skal konsolideres, må en løse eventuelle konflikter.Nå skal vi lage en kunstig konflikt, som vi skal løse.
+Når en er flere som arbeider sammen, ender man ofte opp med å jobbe i samme fil, og kan komme til å endre de samme delene av koden. For at git skal vite hvordan endringer skal konsolideres, må en løse eventuelle konflikter. Nå skal vi lage en kunstig konflikt, som vi skal løse.
 
-:pencil2: Sjekk ut en feature-branch, `feature-branch-3`, fra `main` branch. Erstatt innholdet i `code/index.ts` med innholdet i `code/copypasta/2.3-endring-1.ts`. Sjekk endringene inn i en commit i branchen din.
+:pencil2: Sjekk ut en feature-branch, `feature-branch-3`, fra `main` branch. Erstatt innholdet i `index.ts` med innholdet i `code/2.3-endring-1.ts`. Sjekk endringene inn i en commit i branchen din.
 
-:pencil2: Sjekk ut `main` branch, og ut i fra `main` branch, opprett en ny branch, `feature-branch-4`. Erstatt innholdet i `code/index.ts` med innholdet i `code/copypasta/2.3-endring-2.ts`.
+:pencil2: Sjekk ut `main` branch, og ut i fra `main` branch, opprett en ny branch, `feature-branch-4`. Erstatt innholdet i `code/index.ts` med innholdet i `code/2.3-endring-2.ts`.
 
-:pencil2: Skift
+:pencil2: Merge `feature-branch-3` inn i `main` branch. Forsøk deretter å merge `feature-branch-4` inn i `main` branch.
 
-- Kopiere innhold fra fil 1, legge inn i main
-- Kopiere innhold fra fil 2, legge i en commit i en feature-branch
-- Merge main inn i feature-branch, resolve konflikter
-- Pushe endringer i feature-branch til remote
+TODO: Strategi for å løse merge
+
+TODO: Hvordan redusere sannsynlighet for konflikter
+
+:bulb: Det er lurt å forløpende holde `main` branch oppdatert med din feature branch. Har du brancher som lever over lang tid, uten at du synkroniserer med `main`, risikerer du komplekse konflikter.
 
 ---
 
