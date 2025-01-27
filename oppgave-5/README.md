@@ -1,8 +1,8 @@
-# Oppgave 5 - Praktiske tips og verktøy
+# Oppgave 5 - Bonusoppgave: Praktiske tips og verktøy
 
 ## :bulb: Mål med Oppgave 5
 
-Etter denne oppgaven skal du lære å:
+I denne oppgaven skal vi gå igjennom noen konkrete scenarioer og hvordan vi kan bruke git til å løse konkrete utfordringer en kan treffe på. Her er du litt mer på egen hånd; sjekk dokumentasjonen og lær gjerne kommandoene her utover det som er beskrevet i oppgavene. 
 
 ### 5.1 - Sletting av lokale brancher
 
@@ -10,7 +10,24 @@ Etter denne oppgaven skal du lære å:
 
 :pencil2: Rydd i feature branches lokalt. Sjekk alle brancher du har med kommando `git branch`, og slett deretter alle brancher utenom `main`.
 
-### 5.2 - Sjekke ut tidligere commit
+
+
+### 5.2 - Du vil ta vare på endringene dine uten å lage en commit 
+Du kan bruke `git stash` for å midlertidig lagre endringer i en branch uten å commite de. Eksempelvis, om du holder på med noe i en branch, men trenger å bytte til en annen branch raskt, kan du stashe endringene dine. Sjekk dokumentasjon for `git stash` her: https://git-scm.com/docs/git-stash
+
+:pencil2: Gjør en endring i `index.ts`. Sjekk at endringen er registrert ved å bruke `git status`. Stash endringene dine med kommando `git stash`. Om du sjekker `git status` på ny, vil ikke endringene dine lengre vise. 
+
+- For å se hvilke innslag du har i stashet, kan du skrive `git stash list`. 
+- For å plukke ut igjen siste endring du har stashet, kan du bruke kommando `git stash pop`
+
+:bulb: For å stashe filer som ikke er sporet i repositoriet enda, kan du legge til `-u` flagg på kommandoen. 
+
+:pencil2: Sjekk dokumentasjonen lenket over; finn ut hvordan du kan lagre filer i stashet ditt med en melding. 
+
+:pencil2: Sjekk dokumentasjonen, og finn ut hvordan du kan applisere siste innslag i stashet inn i en ny branch. 
+
+
+### 5.3 - Sjekke ut tidligere commit
 
 :bulb: Av og til trenger vi å gå tilbake i tid (eksempelvis, om en har en feil i produksjon og trenger å finne ut når denne har inntruffet, eller at har et behov for å se hvordan koden så ut en gang i fortiden).
 
@@ -29,6 +46,40 @@ For å sjekke ut en tidligere commit, kan du bruke kommando `git checkout <sha>`
 ### 5.7 - Legge til alias for vanlige git-kommandoer
 
 ### 5.8 - Commit hooks
+
+Nyttige ressurser:
+
+- https://ohshitgit.com/
+
+
+
+
+### 5.2 - Du vil flytte en commit fra en branch til en annen
+
+`git cherry-pick` er en nyttig kommando om du ønsker å flytte en commit fra en branch til en annen (uten merge e.l.). `git cherry-pick` vil prøve å applisere commiten direkte som en egen isolert commit i branchen du står på. 
+
+:pencil2: Sjekk ut 2 brancher. Legg inn 2 individuelle commits i begge branches. Hent en commit fra den ene branchen inn i den andre. 
+
+:bulb: cherry-picking er nyttig når du kun trenger deler av koden fra en annen branch, som gjerne er isolert i en commit. Overbruk av cherry-picking kan føre til dupliserte commits i historikken.
+
+### 5.3 - Endre commit-meldinger
+
+git rebase -i <hash>
+reword commit
+
+### 5.4 - Revertering av endring
+
+git revert <hash>
+
+### 5.5 - Legge til alias for mye brukte kommandoer
+
+Opprette alias
+Vise zsh-alias
+
+### 5.6 - Kjøre kommandoer når du oppretter commits
+
+comm
+
 
 Nyttige ressurser:
 
