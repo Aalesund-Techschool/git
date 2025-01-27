@@ -1,4 +1,4 @@
-# Git & Github
+# Introduksjon til versjonskontroll med Git
 
 Git har blitt et viktig verktøy i verktøykassen som utvikler. Verktøyet er nå det mest brukte versjonskontrollsystemet og er viktig å kunne for å være produktiv som utvikler for å spore endringer i filene våre over tid. Dette er viktig for å både kunne utvikle programvare effektivt, men også for å kunne samhandle med andre effektivt.
 

@@ -30,6 +30,8 @@ git rebase main
 
 Når du står i en feature-branch, vil du i noen tilfeller skrive om commits du har sjekket inn, f.eks. ved å slå sammen commits eller endre commit-melding for en commit. Dette kan du gjøre med `git rebase` i interaktiv modus.
 
+TODO: Beskrive git push --force-with-lease
+
 ### Git pull --rebase
 
 ---
