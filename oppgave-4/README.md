@@ -80,7 +80,7 @@ I de 3 siste radene, kan du erstatte verdien `pick` med verdien `s`eller `squash
 
 :pencil2: Prøv å push endringen til remote repository. Du får få opp at endringen ikke godtas. Dette er fordi vi har skrevet om historikken.
 
-:penvil2: Push til branch ved å bruke kommandoen `git push --force-with-lease`.
+:pencil2: Push til branch ved å bruke kommandoen `git push --force-with-lease`.
 
 :bulb: Når du har skrevet om historikken på en branch som spores i et remote repository, må du pushe endring med et force-flagg for at endringen skal godtas. Det er fristende å bruke `git push -f` (eller `--force`) som tvinger endringen inn. Dette er OK når en arbeider alene. Når en arbeider i team, kan en risikere å skrive om andre sitt arbeid. Det er lurt å bruke kommandoen `git push --force-with-lease` istedet for, da denne tvinger inn endringen kun dersom ingen andre har utført noen endringer siden sist du hentet ned branchen. 
 
