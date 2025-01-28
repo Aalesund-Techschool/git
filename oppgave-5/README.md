@@ -2,7 +2,7 @@
 
 ## :bulb: Mål med Oppgave 5
 
-I denne oppgaven skal vi gå igjennom noen konkrete scenarioer og hvordan vi kan bruke git til å løse konkrete utfordringer en kan treffe på. Her er du litt mer på egen hånd; sjekk dokumentasjonen og lær gjerne kommandoene her utover det som er beskrevet i oppgavene. 
+I denne oppgaven skal vi se på litt diverse funksjonalitet i git, uten at det følger en tråd. Her er du litt mer på egen hånd; sjekk dokumentasjonen, og lær gjerne kommandoene her utover det som er beskrevet i oppgavene. 
 
 ### 5.1 - Sletting av lokale brancher
 
@@ -10,8 +10,9 @@ I denne oppgaven skal vi gå igjennom noen konkrete scenarioer og hvordan vi kan
 
 :pencil2: Rydd i feature branches lokalt. Sjekk alle brancher du har med kommando `git branch`, og slett deretter alle brancher utenom `main`.
 
+:star: Bonus: Sjekk i dokumentasjonen forskjellen på `-d` og `-D`-flagg når du sletter branch.
 
-### 5.2 - Du vil ta vare på endringene dine uten å lage en commit 
+### 5.2 - Du vil ta vare på endringene dine uten å lage en commit (git stash)
 
 Du kan bruke `git stash` for å midlertidig lagre endringer i en branch uten å commite de. Eksempelvis, om du holder på med noe i en branch, men trenger å bytte til en annen branch raskt, kan du stashe endringene dine. Sjekk dokumentasjon for `git stash` her: https://git-scm.com/docs/git-stash
 
@@ -31,7 +32,7 @@ Du kan bruke `git stash` for å midlertidig lagre endringer i en branch uten å 
 
 :bulb: Av og til trenger vi å gå tilbake i tid (eksempelvis, om en har en feil i produksjon og trenger å finne ut når denne har inntruffet, eller at har et behov for å se hvordan koden så ut en gang i fortiden).
 
-For å sjekke ut en tidligere commit, kan du bruke kommando `git checkout <sha>`, der du erstatter `<sha>` med commit-hashen til en tidligere commit.
+For å sjekke ut en tidligere commit, kan du bruke kommando `git checkout <sha>`, der du erstatter `<sha>` med commit-hashen til en tidligere commit. Når du sjekker ut en commit, står du i "Detached HEAD state", dvs, du har spolt deg tilbake i tid. Du kan eksempelvis se hvordan tilstanden til koden så ut her eller sjekke ut en branch fra dette punktet. For å hoppe tilbake til toppen av historikken (HEAD), kan du hoppe tilbake ved bruk av `git checkout -` eller `git checkout <branchnavn>`. 
 
 :pencil2: Sjekk ut en tidligere commit. Hopp deretter tilbake til HEAD.
 
