@@ -11,8 +11,8 @@ I denne oppgaven skal vi gå igjennom noen konkrete scenarioer og hvordan vi kan
 :pencil2: Rydd i feature branches lokalt. Sjekk alle brancher du har med kommando `git branch`, og slett deretter alle brancher utenom `main`.
 
 
-
 ### 5.2 - Du vil ta vare på endringene dine uten å lage en commit 
+
 Du kan bruke `git stash` for å midlertidig lagre endringer i en branch uten å commite de. Eksempelvis, om du holder på med noe i en branch, men trenger å bytte til en annen branch raskt, kan du stashe endringene dine. Sjekk dokumentasjon for `git stash` her: https://git-scm.com/docs/git-stash
 
 :pencil2: Gjør en endring i `index.ts`. Sjekk at endringen er registrert ved å bruke `git status`. Stash endringene dine med kommando `git stash`. Om du sjekker `git status` på ny, vil ikke endringene dine lengre vise. 
@@ -35,26 +35,7 @@ For å sjekke ut en tidligere commit, kan du bruke kommando `git checkout <sha>`
 
 :pencil2: Sjekk ut en tidligere commit. Hopp deretter tilbake til HEAD.
 
-### 5.3 - `git reset`
-
-### 5.4 - `git stash`
-
-### 5.5 - `git cherry-pick`
-
-### 5.6 - `git reflog`
-
-### 5.7 - Legge til alias for vanlige git-kommandoer
-
-### 5.8 - Commit hooks
-
-Nyttige ressurser:
-
-- https://ohshitgit.com/
-
-
-
-
-### 5.2 - Du vil flytte en commit fra en branch til en annen
+### 5.4 - Du vil flytte en commit fra en branch til en annen
 
 `git cherry-pick` er en nyttig kommando om du ønsker å flytte en commit fra en branch til en annen (uten merge e.l.). `git cherry-pick` vil prøve å applisere commiten direkte som en egen isolert commit i branchen du står på. 
 
@@ -62,24 +43,11 @@ Nyttige ressurser:
 
 :bulb: cherry-picking er nyttig når du kun trenger deler av koden fra en annen branch, som gjerne er isolert i en commit. Overbruk av cherry-picking kan føre til dupliserte commits i historikken.
 
-### 5.3 - Endre commit-meldinger
-
-git rebase -i <hash>
-reword commit
+### 5.6 - `git reflog`
 
 ### 5.4 - Revertering av endring
 
 git revert <hash>
-
-### 5.5 - Legge til alias for mye brukte kommandoer
-
-Opprette alias
-Vise zsh-alias
-
-### 5.6 - Kjøre kommandoer når du oppretter commits
-
-comm
-
 
 Nyttige ressurser:
 

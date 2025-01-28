@@ -12,19 +12,29 @@ Dette er en fri oppgave. Målet er at du bruker tid til å bli kjent med hvordan
 
 Dersom du nylig har pushet til en branch, vil du få en pop-up om å opprette en pull request fra den branchen. 
 
-![Opprett pullrequest](image.png)
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
+  <img src="../images/3-pr-popup.png" width="600">
+</div>
 
 Dersom du ikke har pushet nylig til en branch, kan du opprette en pull request via "New pull request" på høyre side av skjermbildet.
 
-![Pull requests i Github](image-1.png)
+
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
+  <img src="../images/3-pr-landing-page.png" width="800">
+</div>
+
 
 Du vil da kunne velge hvilken branch du vil opprette PR for. Eksempel her, kan jeg velge `feature-branch-1`.
 
-![Velg branch for pull request](image-2.png)
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
+  <img src="../images/3-pr-comparisons.png" width="600">
+</div>
 
 Du vil få opp ett skjema for å opprette PR. Her kan du beskrive hvilke konkrete endringer som er utført. Dette er nyttig både for å gi vedkommende som skal kjøre review nødvendig info, men gir oss også mulighet til å gå tilbake å se under hvilke omstendigheter denne endringen ble innført.
 
-![alt text](image-3.png)
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
+  <img src="../images/3-pr-form.png" width="800">
+</div>
 
 :pencil2: Opprett en pull request i github.
 
