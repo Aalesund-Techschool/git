@@ -57,7 +57,7 @@ Når du står i en feature-branch, vil du i noen tilfeller skrive om commits du 
 Vi skal bruke interactive rebase for å slå sammen commits. 
 
 :pencil2: I denne oppgaven gjør velger du selv commit-meldinger og innhold i endringer
-- Sjekk ut en branch. Velg et navn.
+- Sjekk ut en branch fra `main` branch. Velg et selv et navn på branch.
 - Opprett en fil, eller gjør endringer i en eksisterende fil.
 - Opprett så en commit.
 - Gjenta dette endring i fil og ny commit 3 ganger til, til du har 4 commits i branchen din. 
@@ -82,7 +82,7 @@ I de 3 siste radene, kan du erstatte verdien `pick` med verdien `s`eller `squash
 
 :penvil2: Push til branch ved å bruke kommandoen `git push --force-with-lease`.
 
-:bulb: Når du har skrevet om historikken på en branch som spores i et remote repository, må du pushe endring med et force-flagg for at endringen skal godtas. Det er fristende å bruke `git push -f` (eller `--force`) som tvinger endringen inn. Dette er OK når en arbeider alene. Når en arbeider i team, kan en risikere å skrive om andre sitt arbeid. Det er lurt å bruke kommandoen `git push --force-with-lease` istedet for, da denne tvingen inn endringen kun dersom ingen andre har utført noen endringer siden sist du hentet ned branchen. 
+:bulb: Når du har skrevet om historikken på en branch som spores i et remote repository, må du pushe endring med et force-flagg for at endringen skal godtas. Det er fristende å bruke `git push -f` (eller `--force`) som tvinger endringen inn. Dette er OK når en arbeider alene. Når en arbeider i team, kan en risikere å skrive om andre sitt arbeid. Det er lurt å bruke kommandoen `git push --force-with-lease` istedet for, da denne tvinger inn endringen kun dersom ingen andre har utført noen endringer siden sist du hentet ned branchen. 
 
 
 ---
