@@ -14,6 +14,8 @@ Etter denne oppgaven skal du kunne å:
 
 Vi skal nå sette oss i en situasjon lik før, der vi har behov for å merge endringer. I stedet for å bruke `git merge`, skal vi bruke `git rebase` for å rebase den andre branchen vi vil merge inn for å unngå konflikter. I dette tilfellet skal vi ikke merge begge brancher direkte mot `main`, men merge 1 branch først, og deretter rebase branchen mot `main`, for å først "skrive inn" endringene i feature-branch 2 og dermed unngå konflikter.
 
+:pencil2: Sjekk ut din lokale `main` branch, og bruk `git pull` for å hente ned endringer fra forrige oppgave.
+
 :pencil2: Sjekk ut en feature-branch, `feature-branch-5`, fra `main` branch. Erstatt innholdet i `index.ts` med innholdet i `code/4.1-endring-1.ts`. Sjekk endringene inn i en commit i branchen din.
 
 :pencil2: Sjekk ut `main` branch, og ut i fra `main` branch, opprett en ny branch, `feature-branch-6`. Erstatt innholdet i `index.ts` med innholdet i `code/4.1-endring-2.ts`.
