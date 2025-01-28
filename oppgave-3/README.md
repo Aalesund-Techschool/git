@@ -43,11 +43,11 @@ Du vil få opp ett skjema for å opprette PR. Her kan du beskrive hvilke konkret
 
 :pencil2: Opprett en pull request i github.
 
-:pencil2: Start en pull request review på egen PR. Prøv å legg til en kommentar for endringen, tilknyttet en konkret kodelinje. Godkjenn eller avvis PR'en. Du kan starte en review ved å få til fanen `Files changed`, og retter skrive en kommentar ved å trykke på en `+`-ikonet ved en kodelinjenummeret på en endring. Du kan fullføre review ved å trykke på `Review changes` i øvre høyre hjørne. Klikk deg rundt og gjør det kjent med grensesnittet. 
+:pencil2: Start en pull request review på egen PR. Prøv å legg til en kommentar for endringen, tilknyttet en konkret kodelinje. Godkjenn eller avvis PR'en. Du kan starte en review ved å få til fanen `Files changed`, og retter skrive en kommentar ved å trykke på en `+`-ikonet ved en kodelinjenummeret på en endring. Du kan fullføre review ved å trykke på `Review changes` i øvre høyre hjørne. Du får som regel ikke lov til godkjenne eller avvise egen PR, men det får du om du reviewer en PR som noen andre har laget. Klikk deg rundt og gjør det kjent med grensesnittet. 
 
 :pencil2: Merge pull request inn i `main`. Dette gjør du i `Conversations`-fanen, helt nederst. 
 
-:bulb: Det er lurt å slette branch etter en har merget den inn i `main`. Da slipper man rot i remote repository.
+:bulb: Det er lurt å slette branch etter en har merget den inn i `main`. Da slipper man rot i remote repository. Etter du har merget en pull request, får du opp en knapp for dette.
 
 ---
 
