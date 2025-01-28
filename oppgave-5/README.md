@@ -43,12 +43,31 @@ For å sjekke ut en tidligere commit, kan du bruke kommando `git checkout <sha>`
 
 :bulb: cherry-picking er nyttig når du kun trenger deler av koden fra en annen branch, som gjerne er isolert i en commit. Overbruk av cherry-picking kan føre til dupliserte commits i historikken.
 
-### 5.6 - `git reflog`
+### 5.5 - Revertering av endring
 
-### 5.4 - Revertering av endring
+Av og til går ting skeis, og vi trenger å revertere en endring i repositoriet vårt. Eksempelvis, om en commit har blitt merget som fører til feil i produksjon. 
 
-git revert <hash>
+For å revertere en commit, kan du bruke kommando `git revert <sha>`, der `<sha>` er sha-hashen til en commit. Sha-hashen finner du i historikken din ved å bruke `git log`. 
 
-Nyttige ressurser:
+Under vises siste commit fra `git log`. Skulel jeg ønske å revertere denne, kan jeg bruke kommando `git revert df47dd477b1ed2c3f93fce1c747a0a5090a00962`. Det vil da opprettes en egen revert-commit som reverserer endringene. 
 
-- https://ohshitgit.com/
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
+  <img src="../images/5-pre-revert.png" width="500">
+</div>
+
+Når du reverserer, vil du få opp et editor-vindu der du kan beskrive revert-commiten. Som regel holder det å lagre og lukke denne filen, da standard melding ofte er god nok. Når siste commit er reversert, ser historikken slik ut
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
+  <img src="../images/5-post-revert.png" width="500">
+</div>
+
+:pencil2: Sjekk ut en branch. Gjør en endring og opprett en commit. Reverser så denne commiten.
+
+### 5.6 - Nyttige kommandoer
+
+Du er nå ved veis ende. Veldig bra jobba!! 
+
+#### :star: Bonusoppgave
+
+https://dangitgit.com og https://ohshitgit.com inneholder noen kommandoer som er nyttige å kunne. De lister opp noen konkrete feilscenarioer som kan slå ut når man bruker git, og hvordan en kan bruke CLI-verktøyet til å løse problemene som er listet opp. 
+
+:pencil2: Gå over noen av scenarioene. Prøv å sett deg inn i en feilsituasjon, f.eks. med å commite til feil branch eller å bruke reflog. Kombiner med å slå opp i dokumentasjonen. 
