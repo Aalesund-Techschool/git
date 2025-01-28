@@ -8,7 +8,14 @@ Dette er en fri oppgave. Målet er at du bruker tid til å bli kjent med hvordan
 
 ### 3.1 Opprette pull request
 
-:pencil2: Sjekk ut en ny branch med et navn du velger selv. Opprett en ny fil med noe innhold, og sjekk denne inn med en commit i branchen. Push branchen til remote repository.
+:pencil2: Sjekk ut en ny branch med et navn du velger selv. Opprett en ny fil med noe innhold, og sjekk denne inn med en commit i branchen.
+
+:bulb: Når du forsøker å pushe en branch for første gang til remote repository, vil første gang få en feilmelding om at den ikke har en "upstream branch". Her forteller Git deg hva du må gjøre for at branchen din skal spores i remote repository 
+```
+git push --set-upstream origin <branchnavn>
+```
+
+:pencil2: Push branch til remote repository.
 
 Dersom du nylig har pushet til en branch, vil du få en pop-up om å opprette en pull request fra den branchen. 
 
