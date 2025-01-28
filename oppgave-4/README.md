@@ -38,7 +38,7 @@ git rebase main
 
 :pencil2: Løs konflikten du får opp fra rebase (velg selv hvilken side / hvilke deler av koden du vil beholde). 
 
-:pencil2: Når du er ferdig med å rebase, bruk `git add .` for å stage fil, og bruk `git rebase --continue` for å ferdigstille rebase. 
+:pencil2: Når du er ferdig med å rebase, bruk `git add .` for å stage fil, og bruk `git rebase --continue` for å ferdigstille rebase. Du vil få opp et editor-vindu som du kan lukke for å godta rebase.
 
 Historikken bør nå se slik ut. Vi kan nå enkelt merge inn endringene fra `feature-branch-6`. 
 
@@ -46,9 +46,9 @@ Historikken bør nå se slik ut. Vi kan nå enkelt merge inn endringene fra `fea
   <img src="../images/4-post-rebase.png" width="800">
 </div>
 
-:pencil2: Merge endringene fra `feature-branch-6` inn i main.
+:pencil2: Merge endringene fra `feature-branch-6` inn i main. Siden vi har "lurt" git til å tro at vi jobbet over endringer vi egentlig hadde konflikt med, vil vi få en fast-forward-merge.
 
-:bulb: Du ønsker som regel aldri å rebase en branch inn i main. Da skriver du om historikken i felles arbeidsbranch. Dette gjøres som regel ved spesielle tilfeller, der du har et konkret behov for å skrive om historikk, eksempelvis om du det ligger informasjon i `main` som må fjernes. 
+:bulb: Du ønsker som regel aldri å rebase en branch inn i main. Da skriver du om historikken i felles arbeidsbranch. Dette gjøres som regel ved spesielle tilfeller, der du har et konkret behov for å skrive om historikk, eksempelvis om du det ligger informasjon i `main` som må fjernes. En fin tommelfingerregel er at en kun skriver om historikk i sin egen branch. Omskriving av historikk kan være en fot-pistol; da er det greit å kun skyte seg selv i foten. 
 
 ### Git rebase interactive
 
