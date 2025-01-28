@@ -54,7 +54,7 @@ Initialized empty Git repository in /[sti til katalog]/git-workshop-files/.git/
 
 :pencil2: Sjekk status på fil med å bruke kommandoen `git status`. Her bør du se filen du la til under `Untracked files`. Dette betyr at filen ligger i filsystemet, men er ikke ennå lagt til i "staging area". 
 
-<div style="text-align: center">
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/1-untracked-file.png" alt="Alt Text" width="600">
 </div>
 
@@ -62,7 +62,7 @@ Initialized empty Git repository in /[sti til katalog]/git-workshop-files/.git/
 :pencil2: Legg til filen i staging area. Dette kan du gjøre med kommandoen `git add README.md`. Sjekk på nytt status med kommandoen `git status`. 
 
 
-<div style="text-align: center">
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/1-staged-file.png" alt="Alt Text" width="500">
 </div>
 
@@ -71,7 +71,7 @@ Initialized empty Git repository in /[sti til katalog]/git-workshop-files/.git/
 
 :pencil2: Sjekk at du har en commit i commit-loggen din ved å bruke kommando `git log`.
 
-<div style="text-align: center">
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/1-git-log-initial-commit.png" alt="Alt Text" width="500">
 </div>
 
@@ -82,7 +82,7 @@ Initialized empty Git repository in /[sti til katalog]/git-workshop-files/.git/
 
 :pencil2: Opprett et Github-repository på github.com. Har du ikke en github-konto, må du opprette dette. Gå inn på din profil og velg fane "Repositories". Her vil du finne en stor grønn knapp med tittel "New"
 
-<div style="text-align: center">
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/nytt-repo.png" alt="Alt Text" width="400" >
 </div>
 
@@ -91,7 +91,7 @@ Velg et passende navn under **`Repository name`** (Forslag `techschool-git-works
 
 Du vil komme til følgende skjermbilde, om du må de nederste instruksene (**`push an existing repository from the command line`**)
 
-<div style="text-align: center">
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/opprettet-repo.png" alt="Alt Text" width="600">
 </div>
 

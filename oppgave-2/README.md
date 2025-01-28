@@ -48,7 +48,7 @@ export const greeting = (firstname: string, lastname: string) => {
 :pencil2: Sjekk diff i VS code
 
 
-<div style="text-align: center">
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/2-vscode-diff.png">
 </div>
 
@@ -77,7 +77,7 @@ Når en er flere som arbeider sammen, ender man ofte opp med å jobbe i samme fi
 
 Vi har nå 2 commits fra main der begge endrer samme fil, har laget en kunstig situasjon der vi "går i beina på hverandre". 
 
-<div style="text-align: center">
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/2-dual-feature-branch.png" alt="Alt Text" width="600">
 </div>
 
@@ -85,7 +85,7 @@ Vi har nå 2 commits fra main der begge endrer samme fil, har laget en kunstig s
 
 Historikken vår bør se slik ut. Git bør ha kjørt en fast-forward når du merget og du vil ha commit `feature-branch-3` rett i `main`.
 
-<div style="text-align: center">
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/2-dual-feature-branch-1-merged.png" alt="Alt Text" width="600">
 </div>
 
@@ -95,7 +95,7 @@ Videre skal vi merge `feature-branch-4` inn i `main` branch. Vi skal løse konfl
 
 :pencil2: I git-verktøyet i VS Code, trykk på filen `index.ts` som under `Merge Changes`, og velg `Resolve in Merge Editor`
 
-<div style="text-align: center">
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/2-ready-for-conflict-resolvement.png" alt="Alt Text" width="800">
 </div>
 
@@ -103,7 +103,7 @@ Videre skal vi merge `feature-branch-4` inn i `main` branch. Vi skal løse konfl
 :bulb: Du vil få opp 3 vinduer. Ett vindu til venstre med tittel `Incoming`. Dette er endringene fra branchen som skal inn i `main`. Du har ett vindu som heter `Current`, som er innholdet i main. Til slutt har du et `Result`-vindu nederst som viser hvordan endelig merge ser ut. 
 
 
-<div style="text-align: center">
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/2-conflict-merge.png" alt="Alt Text" width="800">
 </div>
 
@@ -113,7 +113,7 @@ Videre skal vi merge `feature-branch-4` inn i `main` branch. Vi skal løse konfl
 
 :pencil2: Sjekk `git log`. Du bør nå ha en merge-commit i loggen din. 
 
-<div style="text-align: center">
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/2-git-log-merge-commit.png" alt="Alt Text" width="500">
 </div>
 
@@ -125,7 +125,7 @@ Videre skal vi merge `feature-branch-4` inn i `main` branch. Vi skal løse konfl
 :bulb: Når du merger en branch, oppretter vi en egen commit i git-historikken som beskriver endringene i commitene du merger inn. Dette fungere som en bro mellom historikken i de 2 forskjellige branchene og gjør at vi får en felles historikk i branchen i merger inn i.
 
 
-<div style="text-align: center">
+<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/2-git-history.png" alt="Alt Text" width="700">
 </div>
 
