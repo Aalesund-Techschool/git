@@ -42,12 +42,15 @@ export const greeting = (firstname: string, lastname: string) => {
 
 :bulb: `git diff` er nyttig når du vil se en liten diff. Skal du inspisere en større diff, er det lurt å bruke verkøyet i VS Code eller tilsvarende verktøy i andre editorer/IDEer. Under ser du hvor du finner git-verktøyet i VS Code. Du finner git-verktøyet i VS Code ved å trykke på følgende ikon: 
 
-![alt text](image-1.png)
+![alt text](../images/2-vscode-git-icon.png)
 
 
 :pencil2: Sjekk diff i VS code
 
-![alt text](image.png)
+
+<div style="text-align: center">
+  <img src="../images/2-vscode-diff.png">
+</div>
 
 :pencil2: Lag en commit med siste endring i `index.ts`. Velg en passende commit-melding.
 
@@ -73,21 +76,36 @@ Når en er flere som arbeider sammen, ender man ofte opp med å jobbe i samme fi
 :pencil2: Sjekk ut `main` branch, og ut i fra `main` branch, opprett en ny branch, `feature-branch-4`. Erstatt innholdet i `index.ts` med innholdet i `code/2.3-endring-2.ts`.
 
 Vi har nå 2 commits fra main der begge endrer samme fil, har laget en kunstig situasjon der vi "går i beina på hverandre". 
-![alt text](image-2.png)
 
+<div style="text-align: center">
+  <img src="../images/2-dual-feature-branch.png" alt="Alt Text" width="600">
+</div>
 
 :pencil2: Merge `feature-branch-3` inn i `main` branch. 
 
-![alt text](image-3.png)
+Historikken vår bør se slik ut. Git bør ha kjørt en fast-forward når du merget og du vil ha commit `feature-branch-3` rett i `main`.
 
-:pencil2: Merge `feature-branch-4` inn i `main` branch. Løs konflikten slik at endringene fra `feature-branch-4` blir med videre. Dvs:
+<div style="text-align: center">
+  <img src="../images/2-dual-feature-branch-1-merged.png" alt="Alt Text" width="600">
+</div>
+
+Videre skal vi merge `feature-branch-4` inn i `main` branch. Vi skal løse konflikten slik at endringene fra `feature-branch-4` blir med videre. Dvs:
 - Output fra `greeting`-funksjonen starter med `Hei hei`.
 - Det er 2 objekter i array'en `people`.
 
 :pencil2: I git-verktøyet i VS Code, trykk på filen `index.ts` som under `Merge Changes`, og velg `Resolve in Merge Editor`
-![alt text](image-5.png)
+
+<div style="text-align: center">
+  <img src="../images/2-ready-for-conflict-resolvement.png" alt="Alt Text" width="800">
+</div>
+
 
 :bulb: Du vil få opp 3 vinduer. Ett vindu til venstre med tittel `Incoming`. Dette er endringene fra branchen som skal inn i `main`. Du har ett vindu som heter `Current`, som er innholdet i main. Til slutt har du et `Result`-vindu nederst som viser hvordan endelig merge ser ut. 
+
+
+<div style="text-align: center">
+  <img src="../images/2-conflict-merge.png" alt="Alt Text" width="800">
+</div>
 
 :pencil2: Velg `Accept Incoming` i `Incoming`-vinduet for å velge riktig side.  Klikk deretter `Complete Merge`. 
 
@@ -95,18 +113,21 @@ Vi har nå 2 commits fra main der begge endrer samme fil, har laget en kunstig s
 
 :pencil2: Sjekk `git log`. Du bør nå ha en merge-commit i loggen din. 
 
-![alt text](image-7.png)
-
-
-![alt text](image-6.png)
+<div style="text-align: center">
+  <img src="../images/2-git-log-merge-commit.png" alt="Alt Text" width="500">
+</div>
 
 :bulb: Nå har vi merget en branch med konflikter inn i `main`. En god strategi er å holde din feature-branch oppdatert mot `main` og løse konflikter den veien. Da har du anledning til å løse konflikten og påse at innholdet i feature-branchen din fungere som det skal, og slipper konflikter for `main`.
 
 :bulb: Av og til er det ikke så enkelt at man kan velge fra `Incoming` eller `Current`, da en kanskje vil ha litt fra hver side. Det går an å klippe og lime inn i `Result` vinduet fra de to andre vinduene for å gjennomføre merge. Eksempelvis kan en akseptere en side, og kopiere det man trenger fra den andre siden. 
 
 
-
 :bulb: Når du merger en branch, oppretter vi en egen commit i git-historikken som beskriver endringene i commitene du merger inn. Dette fungere som en bro mellom historikken i de 2 forskjellige branchene og gjør at vi får en felles historikk i branchen i merger inn i.
+
+
+<div style="text-align: center">
+  <img src="../images/2-git-history.png" alt="Alt Text" width="700">
+</div>
 
 ---
 
