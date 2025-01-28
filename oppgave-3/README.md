@@ -17,7 +17,7 @@ git push --set-upstream origin <branchnavn>
 
 :pencil2: Push branch til remote repository.
 
-Dersom du nylig har pushet til en branch, vil du få en pop-up om å opprette en pull request fra den branchen. 
+Det er flere snarveier for å komme inn i grensesnittet for å opprette pull request. Når du pusher endring git remote repository, får du opp i terminalen din en lenke du kan gå til for å opprette PR. Alternativt, dersom du nylig har pushet til en branch, vil du få en pop-up om å opprette en pull request fra den branchen. 
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/3-pr-popup.png" width="600">
@@ -25,11 +25,9 @@ Dersom du nylig har pushet til en branch, vil du få en pop-up om å opprette en
 
 Dersom du ikke har pushet nylig til en branch, kan du opprette en pull request via "New pull request" på høyre side av skjermbildet.
 
-
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/3-pr-landing-page.png" width="800">
 </div>
-
 
 Du vil da kunne velge hvilken branch du vil opprette PR for. Eksempel her, kan jeg velge `feature-branch-1`.
 
