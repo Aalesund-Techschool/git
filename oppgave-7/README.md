@@ -20,6 +20,7 @@ on:
   pull_request:
     paths:
       - 'code/app/**'
+      - '.github/workflows/frontend-build.yml'
   workflow_dispatch:
 jobs:
   build:
@@ -49,11 +50,15 @@ Her er det et par nye ting fra workflow i oppgave 6.
 - Steget `npm ci` installerer dependencies definert i `package-lock.json`. Her bruker vi `npm ci` istedet for `npm install` (se https://docs.npmjs.com/cli/v11/commands/npm-ci).
 - Steget `npm run build` kjører script fra `package.json` som bygger løsningen.
 
-:pencil2: Commit ny action workflow og merge den inn i `main`. Opprett så en pull-request med en endring i `code/app` (Gjerne der du først får bygget til å feile for å sjekke at PR'en blir "rød", for å så fikse og få den "grønn").
+:pencil2: Commit ny action workflow og merge den inn i `main`. Opprett så en pull-request med en endring i `code/app`. Prøv gjerne å commit en endring der du lager en kompileringsfeil i koden, for å se at action feiler, og deretter fiks opp i det og sjekk at action går igjennom. 
+
+:bulb: Du kan bruke samme PR som du akkuratt opprettet resten av workshop'en, og committe nye endringer direkte i branchen din for å kjøre opp igjen actions.
 
 ### 7.1.4 - Kjøring av tester
 
-I `app/code` har vi lagt til noen enhetstester (`fizzbuzz.test.ts`). Legg til et steg i workflow'en som kjører testene etter at `npm run build` er gjennomført. 
+I `app/code` har vi lagt til noen enhetstester (`fizzbuzz.test.ts`). 
+
+:pencil2: Legg til et steg i workflow'en som kjører testene etter at `npm run build` er gjennomført. Kommando for dette er `npm run test`.
 
 ### 7.1.4 - Auditing av pakker
 

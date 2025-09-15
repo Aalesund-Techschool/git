@@ -6,9 +6,14 @@ I denne oppgaven skal vi se på hvordan vi kan knytte kjøring av jobber knyttet
 
 I de neste oppgavene skal vi se på continuous integration i Github Actions, der vi skal lage et oppsett for å kjøre automatiske sjekker på om koden vår er god nok til å merges inn i `main`.
 
+__Om du starter her, initialiser et tomt repository og push dette til Github.com. Om har følgt de andre oppgavene, kan du fortsette i samme repository.__ 
+
+
 # 6.1 - Oppsett av Github Action
 
 I første del skal vi lage en enkel workflow. Målet er kun å skrive ut teksten `Hello world` hver gang en PR opprettes (eller oppdateres) mot repoet vårt.
+
+:pencil2: Fra workshop-repoet, hent ned katalog `/code/app` inn i eget repository (behold mappestruktur). Det enkleste er å klone ned repoet og kopiere over filene. 
 
 ### Oppsett av Github Actions workflow
 
@@ -41,9 +46,11 @@ jobs:
 Her lager vi en workflow som heter `PR Hello World`. Under `on`-seksjonen, spesifiserer vi at workflowen skal kjøre når en PR åpnes, åpnes på nytt (etter den har vært stengt) eller når den mottar oppdateringer. 
 
 ### 6.1.3 - Commit og test
-:pencil2: Legg til, commit og push filen til Github
+:pencil2: Legg til, commit til `main` og push filen til Github.
 
-:pencil2: Gå til Github.com. Ved siden av fanen "Pull Requests" finner du fanen "Actions". Gå dit for å sjekke at workflowen din kjører. 
+:pencil2: Sjekk ut en branch og utfør en vilkårlig endring. Push endring til Github og opprett en pull request.
+
+:bulb:  Ved siden av fanen "Pull Requests" finner du fanen "Actions". Gå dit for å sjekke at workflowen din kjører. 
 
 # 6.2 - Manuell trigger
 
@@ -61,7 +68,7 @@ on:
   workflow_dispatch:
 ```
 
-:pencil2: Commit og push endringene til Github.com. 
+:pencil2: Commit til `main` og push endringene til Github.com. 
 
 
 :bulb: Når vi nå legger til `workflow_dispatch`, tillater vi å kjøre workflows ved å starte de manuelt. Du valg om å starte manuelt ved å gå inn på valgt workflow og trykke "Run workflow" på høyre side. 
