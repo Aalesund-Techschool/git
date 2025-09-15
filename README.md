@@ -1,8 +1,13 @@
-# Introduksjon til versjonskontroll med Git
+# Versjonskontroll med Git og Github actions
 
 Git har blitt et viktig verktøy i verktøykassen som utvikler. Verktøyet er nå det mest brukte versjonskontrollsystemet og er viktig å kunne for å være produktiv som utvikler for å spore endringer i filene våre over tid. Dette er viktig for å både kunne utvikle programvare effektivt, men også for å kunne samhandle med andre effektivt.
 
 I denne workshop'en skal innom git i kommandolinjen, der vi går igjennom de grunnleggende mekanismene rundt å versjonere filer. Vi ser på de viktigste kommandoene, men også lure tips for ro seg i land når ting går galt. Vi skal bruke Github.com for å arbeide mot et repository utenfor egen maskin, der vi også ser på bruk av Pull Requests. For å merge endringer og løse konflikter, bruker vi Visual Studio Code.
+
+Dette oppgavesettet er laget for å kunne gjennomføres i flere workshops. 
+- Oppgavene 1 - 5 omhandler bruk av git og en introduksjon til Github. 
+- Oppgavene 6 - 8 omhandler bruk av Github Actions for å etablere en continuous integration pipline for automatisk sjekk av kodekvalitet / bygg.
+
 
 ## Oppsett på egen maskin
 
@@ -33,6 +38,9 @@ Dette repositoriet har et sett med øvelser organisert i kataloger. Hver katalog
 - [Oppgave 3](oppgave-3/README.md)
 - [Oppgave 4](oppgave-4/README.md)
 - [Oppgave 5](oppgave-5/README.md)
+- [Oppgave 6](oppgave-6/README.md)
+- [Oppgave 7](oppgave-7/README.md)
+- [Oppgave 8](oppgave-8/README.md)
 
 ### Symboler og ikoner du finner igjen i oppgavene
 
