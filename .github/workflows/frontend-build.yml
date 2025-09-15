@@ -1,0 +1,48 @@
+name: Build frontend app
+
+on:
+  pull_request:
+    paths:
+      - 'code/app/**'
+      - '.github/workflows/frontend-build.yml'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: code/app
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+            node-version: '22'
+      - name: Install dependencies (ci)
+        run: npm ci
+      - name: Build application
+        run: npm run build
+      - name: Run tests
+        run: npm run test
+      - name: Run security audit
+        run: npm audit --audit-level=high
+      - name: Notify success
+        if: success()
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: |
+          curl -s -X POST -H 'Content-Type: application/json' \
+            -d "{\"content\":\"Build status: ✅\",\"username\": \"$GITHUB_REPOSITORY_OWNER\"}" \
+            "$WEBHOOK_URL"
+
+      - name: Notify failure
+        if: failure()
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: |
+          curl -s -X POST -H 'Content-Type: application/json' \
+            -d "{\"content\":\"Build status: ❌\",\"username\": \"$GITHUB_REPOSITORY_OWNER\"}" \
+            "$WEBHOOK_URL"
