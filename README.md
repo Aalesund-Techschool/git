@@ -20,14 +20,14 @@ Har du ikke git installert, finner du oppskrift for å installere på alle opera
 
 ### Editor
 
-Det er fritt frem for å bruke den kode-editoren du selv foretrekker, men vi varmt anbefale Visual Studio Code.
+Du står fritt til å bruke den kode-editoren du selv foretrekker, men vi anbefaler varmt Visual Studio Code.
 
 ## Kom igang
 
 - Selv om du har denne filen (`README.md`) på egen maskin om du har klonet ned repoet, er det enklere å lese på Github med tanke på formattering. Vi anbefaler derfor at du bruker nettleser til å lese oppgavene.
 - Start på oppgave 1, og spør gjerne om det er noe som er uklart eller noe du ønsker å diskutere.
 
-:exclamation: Vi skal ikke bruke GUI-klienten i dette workshopen. Her skal vi bruke terminal/CLI. Det er lurt å unngå klipp-og-lim for å bli vandt til å skrive git-kommandoer, selv om det kan oppleves som tungvindt i starten. Etterhvert som en får det inn i fingrene, blir bruk av CLI-verktøyet en effektiv måte å jobbe på.
+:exclamation: Vi skal ikke bruke GUI-klienten i denne workshopen. Her skal vi bruke terminal/CLI. Det er lurt å unngå klipp-og-lim for å bli vandt til å skrive git-kommandoer, selv om det kan oppleves som tungvindt i starten. Etterhvert som en får det inn i fingrene, blir bruk av CLI-verktøyet en effektiv måte å jobbe på.
 
 ## Øvelser
 
