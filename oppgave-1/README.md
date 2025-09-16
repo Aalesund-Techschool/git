@@ -89,14 +89,14 @@ Initialized empty Git repository in /[sti til katalog]/git-workshop-files/.git/
 
 Velg et passende navn under **`Repository name`** (Forslag `techschool-git-workshop`). Ikke velg noen andre innstillinger, og trykk **`Create repository`**.
 
-Du vil komme til følgende skjermbilde, om du må de nederste instruksene (**`push an existing repository from the command line`**)
+Du vil komme til følgende skjermbilde, om du skal benytte deg av de nederste instruksene (**`push an existing repository from the command line`**)
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/opprettet-repo.png" alt="Alt Text" width="600">
 </div>
 
 
-Etter du har utført instruksene i Github, vil ha:
+Etter du har utført instruksene i Github, vil du ha:
 
 - Satt opp ditt lokale repository til å spore et "remote repository" / "remote origin".
 - Git branchen din navnet `main` (Om du sto på branch `master` blir denne nå `main`).
