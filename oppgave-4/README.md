@@ -30,7 +30,7 @@ Historikken bør se slik ut, med en fast-forward merge fra `feature-branch-5` (`
 
 Vi skal nå rebase historikken i `feature-branch-6`, slik at det tilsynelatende ser ut som vi har branchet ut fra endringene påført etter merge fra `feature-branch-5`.
 
-:pencil2: Gå inn i `feature-branch-5`. Rebase endringene fra `main` inn i `feature-branch-5`. Dette kan du gjøre med følgende kommando:
+:pencil2: Gå inn i `feature-branch-6`. Rebase endringene fra `main` inn i `feature-branch-6`. Dette kan du gjøre med følgende kommando:
 
 ```
 git rebase main
