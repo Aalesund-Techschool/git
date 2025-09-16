@@ -18,9 +18,9 @@ Vi skal nå sette oss i en situasjon lik før, der vi har behov for å merge end
 
 :pencil2: Sjekk ut en feature-branch, `feature-branch-5`, fra `main` branch. Erstatt innholdet i `index.ts` med innholdet i `code/4.1-endring-1.ts`. Sjekk endringene inn i en commit i branchen din.
 
-:pencil2: Sjekk ut `main` branch, og ut i fra `main` branch, opprett en ny branch, `feature-branch-6`. Erstatt innholdet i `index.ts` med innholdet i `code/4.1-endring-2.ts`.
+:pencil2: Sjekk ut `main` branch, og ut i fra `main` branch, opprett en ny branch, `feature-branch-6`. Erstatt innholdet i `index.ts` med innholdet i `code/4.1-endring-2.ts`. Sjekk endringene inn i en commit i branchen din.
 
-:pencil2: Merge `feature-branch-5` inn i `main`.
+:pencil2: Merge `feature-branch-5` inn i `main`. 
 
 Historikken bør se slik ut, med en fast-forward merge fra `feature-branch-5` (`fb4 commit`). 
 
