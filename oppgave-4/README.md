@@ -60,7 +60,7 @@ Vi skal bruke interactive rebase for å slå sammen commits.
 - Sjekk ut en branch fra `main` branch. Velg et selv et navn på branch.
 - Opprett en fil, eller gjør endringer i en eksisterende fil.
 - Opprett så en commit.
-- Gjenta dette endring i fil og ny commit 3 ganger til, til du har 4 commits i branchen din. 
+- Gjenta endring i fil og ny commit 3 ganger til, til du har 4 commits i branchen din. 
 
 :pencil2: Push branchen din til remote repository.
 
