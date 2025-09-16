@@ -76,3 +76,8 @@ on:
 ![alt text](workflow_dispatch.png)
 
 :pencil2: Kjør workflowen manuelt for å sjekke at manuell kjøring fungerer.
+
+
+---
+
+[:arrow_right: Gå til neste oppgave](../oppgave-7/README.md)

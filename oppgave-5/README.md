@@ -72,3 +72,7 @@ Du er nå ved veis ende. Veldig bra jobba!!
 https://dangitgit.com og https://ohshitgit.com inneholder noen kommandoer som er nyttige å kunne. De lister opp noen konkrete feilscenarioer som kan slå ut når man bruker git, og hvordan en kan bruke CLI-verktøyet til å løse problemene som er listet opp. 
 
 :pencil2: Gå over noen av scenarioene. Prøv å sett deg inn i en feilsituasjon, f.eks. med å commite til feil branch eller å bruke reflog. Kombiner med å slå opp i dokumentasjonen. 
+
+---
+
+[:arrow_right: Gå til neste oppgave](../oppgave-6/README.md)

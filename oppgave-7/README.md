@@ -66,3 +66,7 @@ I de fleste applikasjoner bruker vi gjerne pakker/biblioteker som vi ikke har sk
 
 :pencil2: Legg til et ekstra steg som kjører `npm audit --audit-level=high` for å feile på alvorlige sårbarheter.
 
+
+---
+
+[:arrow_right: Gå til neste oppgave](../oppgave-8/README.md)
