@@ -2,7 +2,7 @@
 
 Git har blitt et viktig verktøy i verktøykassen som utvikler. Verktøyet er nå det mest brukte versjonskontrollsystemet og er viktig å kunne for å være produktiv som utvikler for å spore endringer i filene våre over tid. Dette er viktig for å både kunne utvikle programvare effektivt, men også for å kunne samhandle med andre effektivt.
 
-I denne workshop'en skal innom git i kommandolinjen, der vi går igjennom de grunnleggende mekanismene rundt å versjonere filer. Vi ser på de viktigste kommandoene, men også lure tips for ro seg i land når ting går galt. Vi skal bruke Github.com for å arbeide mot et repository utenfor egen maskin, der vi også ser på bruk av Pull Requests. For å merge endringer og løse konflikter, bruker vi Visual Studio Code.
+I denne workshop'en skal vi innom git i kommandolinjen, der vi går igjennom de grunnleggende mekanismene rundt å versjonere filer. Vi ser på de viktigste kommandoene, men også lure tips for å ro seg i land når ting går galt. Vi skal bruke Github.com for å arbeide mot et repository utenfor egen maskin, der vi også ser på bruk av Pull Requests. For å merge endringer og løse konflikter, bruker vi Visual Studio Code.
 
 Dette oppgavesettet er laget for å kunne gjennomføres i flere workshops. 
 - Oppgavene 1 - 5 omhandler bruk av git og en introduksjon til Github. 
