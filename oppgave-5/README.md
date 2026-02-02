@@ -1,16 +1,16 @@
 # Oppgave 5 - Bonusoppgave: Praktiske tips og verktøy
 
-## :bulb: Mål med Oppgave 5
+## Mål med Oppgave 5
 
 I denne oppgaven skal vi se på litt diverse funksjonalitet i git, uten at det følger en tråd. Her er du litt mer på egen hånd; sjekk dokumentasjonen, og lær gjerne kommandoene her utover det som er beskrevet i oppgavene. 
 
 ### 5.1 - Sletting av lokale brancher
 
-:bulb: Det kan fort hope seg opp med brancher. Det er vanlig å slette disse eksempelvis når en merger en pull request, men lokale brancher kan bli liggende. Brancher kan slettes lokalt ved å bruke kommandoen `git branch -D <branchnavn>`, der du erstatter `<branchnavn>` med navn på branch du vil slette.
+Det kan fort hope seg opp med brancher. Det er vanlig å slette disse eksempelvis når en merger en pull request, men lokale brancher kan bli liggende. Brancher kan slettes lokalt ved å bruke kommandoen `git branch -D <branchnavn>`, der du erstatter `<branchnavn>` med navn på branch du vil slette.
 
 :pencil2: Rydd i feature branches lokalt. Sjekk alle brancher du har med kommando `git branch`, og slett deretter alle brancher utenom `main`.
 
-:star: Bonus: Sjekk i dokumentasjonen forskjellen på `-d` og `-D`-flagg når du sletter branch.
+:pencil2: Bonus: Sjekk i dokumentasjonen forskjellen på `-d` og `-D`-flagg når du sletter branch.
 
 ### 5.2 - Du vil ta vare på endringene dine uten å lage en commit (git stash)
 
@@ -21,7 +21,7 @@ Du kan bruke `git stash` for å midlertidig lagre endringer i en branch uten å 
 - For å se hvilke innslag du har i stashet, kan du skrive `git stash list`. 
 - For å plukke ut igjen siste endring du har stashet, kan du bruke kommando `git stash pop`
 
-:bulb: For å stashe filer som ikke er sporet i repositoriet enda, kan du legge til `-u` flagg på kommandoen. 
+For å stashe filer som ikke er sporet i repositoriet enda, kan du legge til `-u` flagg på kommandoen. 
 
 :pencil2: Sjekk dokumentasjonen lenket over; finn ut hvordan du kan lagre filer i stashet ditt med en melding. 
 
@@ -42,7 +42,7 @@ For å sjekke ut en tidligere commit, kan du bruke kommando `git checkout <sha>`
 
 :pencil2: Sjekk ut 2 brancher. Legg inn 2 individuelle commits i begge branches. Hent en commit fra den ene branchen inn i den andre. 
 
-:bulb: cherry-picking er nyttig når du kun trenger deler av koden fra en annen branch, som gjerne er isolert i en commit. Overbruk av cherry-picking kan føre til dupliserte commits i historikken.
+Cherry-picking er nyttig når du kun trenger deler av koden fra en annen branch, som gjerne er isolert i en commit. Overbruk av cherry-picking kan føre til dupliserte commits i historikken.
 
 ### 5.5 - Revertering av endring
 
