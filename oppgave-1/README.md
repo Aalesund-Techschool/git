@@ -1,6 +1,6 @@
 # Oppgave 1 - Vanlige kommandoer
 
-## :bulb: Mål med Oppgave 1
+## Mål med Oppgave 1
 
 Etter denne oppgaven skal du kunne å:
 
@@ -14,7 +14,7 @@ Etter denne oppgaven skal du kunne å:
 
 ## 1.1 - Oppsett av git-config
 
-:bulb: I denne seksjonen skal vi sette opp konfigurasjon som beskriver "hvem du er" i git. Du kan hoppe over denne delen om dette er alt noe du har satt opp. Om `git config --global user.name` og `git config --global user.email` returnerer ditt navn og epost-adresse, har du alt satt dette opp.
+I denne seksjonen skal vi sette opp konfigurasjon som beskriver "hvem du er" i git. Du kan hoppe over denne delen om dette er alt noe du har satt opp. Om `git config --global user.name` og `git config --global user.email` returnerer ditt navn og epost-adresse, har du alt satt dette opp.
 
 :pencil2: Konfigurer navn og epost i git-konfigurasjonen din
 
@@ -27,7 +27,7 @@ Erstatt `Ditt Navn` og `ditt.navn@epost.no` med ditt eget navn og epostadresse.
 
 ## 1.2 - Oppsett av standard editor
 
-:bulb: I enkelte tilfeller trenger du en editor når du bruker Git via CLI, eksempelvis når du skal godta en merge eller skrive om commits. Avhengig av hvilket operativsystem du bruker, kan standardvalget være satt til notepad, vim eller nano. Ønsker du å bruke en annen editor, kan du konfigurere dette.
+I enkelte tilfeller trenger du en editor når du bruker Git via CLI, eksempelvis når du skal godta en merge eller skrive om commits. Avhengig av hvilket operativsystem du bruker, kan standardvalget være satt til notepad, vim eller nano. Ønsker du å bruke en annen editor, kan du konfigurere dette.
 
 :pencil2: Konfigurer standard editor *(Valgfritt. Om du ikke vil konfigurere standard editor for git (dvs. du er fornøyd med den du alt bruker, f.eks. vim eller nano), kan du hoppe over dette steget.)*
 
@@ -76,7 +76,7 @@ Initialized empty Git repository in /[sti til katalog]/git-workshop-files/.git/
 </div>
 
 
-:bulb: Du har nå opprettet et git-repository og lagt inn første commit via kommandolinjen. Bra jobba! Nå har vi alt arbeid lokalt på egen maskin, men vi ønsker gjerne å sjekke inn koden et sentralt sted.
+Du har nå opprettet et git-repository og lagt inn første commit via kommandolinjen. Bra jobba! Nå har vi alt arbeid lokalt på egen maskin, men vi ønsker gjerne å sjekke inn koden et sentralt sted.
 
 ## 1.5 - Opprett Github-repository
 
