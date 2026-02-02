@@ -1,6 +1,6 @@
 # Oppgave 4 - Rebasing
 
-## :bulb: Mål med Oppgave 4
+## Mål med Oppgave 4
 
 Etter denne oppgaven skal du kunne å:
 
@@ -10,7 +10,7 @@ Etter denne oppgaven skal du kunne å:
 
 ### 4.1 - Git rebase
 
-:bulb: Git rebase er en måte å skrive om historikken, slik vi kan flytte commits fra en branch til toppen av en annen branch, slik historikken blir lineær. Vi skriver om historikken, slik at endringene våre tilsynelatende ser ut til å ta utgangspunkt i den nyeste versjonen av branchen vi rebaser mot. 
+Git rebase er en måte å skrive om historikken, slik vi kan flytte commits fra en branch til toppen av en annen branch, slik historikken blir lineær. Vi skriver om historikken, slik at endringene våre tilsynelatende ser ut til å ta utgangspunkt i den nyeste versjonen av branchen vi rebaser mot. 
 
 Vi skal nå sette oss i en situasjon lik før, der vi har behov for å merge endringer. I stedet for å bruke `git merge`, skal vi bruke `git rebase` for å rebase den andre branchen vi vil merge inn for å unngå konflikter. I dette tilfellet skal vi ikke merge begge brancher direkte mot `main`, men merge 1 branch først, og deretter rebase branchen mot `main`, for å først "skrive inn" endringene i feature-branch 2 og dermed unngå konflikter.
 
@@ -48,7 +48,7 @@ Historikken bør nå se slik ut. Vi kan nå enkelt merge inn endringene fra `fea
 
 :pencil2: Merge endringene fra `feature-branch-6` inn i main. Siden vi har "lurt" git til å tro at vi jobbet over endringer vi egentlig hadde konflikt med, vil vi få en fast-forward-merge.
 
-:bulb: Du ønsker som regel aldri å rebase en branch inn i main. Da skriver du om historikken i felles arbeidsbranch. Dette gjøres som regel ved spesielle tilfeller, der du har et konkret behov for å skrive om historikk, eksempelvis om du det ligger informasjon i `main` som må fjernes. En fin tommelfingerregel er at en kun skriver om historikk i sin egen branch. Omskriving av historikk kan være en fot-pistol; da er det greit å kun skyte seg selv i foten. 
+Du ønsker som regel aldri å rebase en branch inn i main. Da skriver du om historikken i felles arbeidsbranch. Dette gjøres som regel ved spesielle tilfeller, der du har et konkret behov for å skrive om historikk, eksempelvis om du det ligger informasjon i `main` som må fjernes. En fin tommelfingerregel er at en kun skriver om historikk i sin egen branch. Omskriving av historikk kan være en fot-pistol; da er det greit å kun skyte seg selv i foten. 
 
 ### Git rebase interactive
 
@@ -82,7 +82,7 @@ I de 3 siste radene, kan du erstatte verdien `pick` med verdien `s`eller `squash
 
 :pencil2: Push til branch ved å bruke kommandoen `git push --force-with-lease`.
 
-:bulb: Når du har skrevet om historikken på en branch som spores i et remote repository, må du pushe endring med et force-flagg for at endringen skal godtas. Det er fristende å bruke `git push -f` (eller `--force`) som tvinger endringen inn. Dette er OK når en arbeider alene. Når en arbeider i team, kan en risikere å skrive om andre sitt arbeid. Det er lurt å bruke kommandoen `git push --force-with-lease` istedet for, da denne tvinger inn endringen kun dersom ingen andre har utført noen endringer siden sist du hentet ned branchen. 
+Når du har skrevet om historikken på en branch som spores i et remote repository, må du pushe endring med et force-flagg for at endringen skal godtas. Det er fristende å bruke `git push -f` (eller `--force`) som tvinger endringen inn. Dette er OK når en arbeider alene. Når en arbeider i team, kan en risikere å skrive om andre sitt arbeid. Det er lurt å bruke kommandoen `git push --force-with-lease` istedet for, da denne tvinger inn endringen kun dersom ingen andre har utført noen endringer siden sist du hentet ned branchen. 
 
 
 ---
