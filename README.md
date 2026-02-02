@@ -42,21 +42,6 @@ Dette repositoriet har et sett med øvelser organisert i kataloger. Hver katalog
 - [Oppgave 7](oppgave-7/README.md)
 - [Oppgave 8](oppgave-8/README.md)
 
-### Symboler og ikoner du finner igjen i oppgavene
-
-#### Ikoner med spesiell betydning
-
-- :pencil2: En oppgave du skal utføre
-- :bulb: Ekstra informasjon eller tips. Her trenger du ikke å utføre noe, men ta med deg informasjon videre.
-- :poop: Dårlig praksis, gjerne en uheldig måte å løse et problem på.
-- :star: En bonusoppgave
-
-#### Tastatursnarveier
-
-Tips om snarveier du kan ta ved å bruke tastaturkombinasjoner ser slik ut:
-
-<kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>C</kbd>
-
 #### Diff blocks
 
 En diff-block vil vise om det er tekst som skal legges til eller fjernes (`-` fjernes, `+` legges til)
