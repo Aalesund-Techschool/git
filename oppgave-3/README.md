@@ -1,6 +1,6 @@
 # Oppave 3 - Bruk av Github
 
-## :bulb: Mål med Oppgave 3
+## Mål med Oppgave 3
 
 Når en arbeider på systemer som må fungere til enhver tid, er pull requests og code reviews et viktig verktøy. Ved å lage en pull request, får en å beskrive endringer, og dine kollegaer kan være med å diskutere og komme med forbedringsforslag. I tillegg fungerer det som en god mekanisme for dokumentasjon for hvorfor en endring er utført.
 
@@ -10,7 +10,7 @@ Dette er en fri oppgave. Målet er at du bruker tid til å bli kjent med hvordan
 
 :pencil2: Sjekk ut en ny branch med et navn du velger selv. Opprett en ny fil med noe innhold, og sjekk denne inn med en commit i branchen.
 
-:bulb: Når du forsøker å pushe en branch for første gang til remote repository, vil første gang få en feilmelding om at den ikke har en "upstream branch". Her forteller Git deg hva du må gjøre for at branchen din skal spores i remote repository 
+Når du forsøker å pushe en branch for første gang til remote repository, vil første gang få en feilmelding om at den ikke har en "upstream branch". Her forteller Git deg hva du må gjøre for at branchen din skal spores i remote repository 
 ```
 git push --set-upstream origin <branchnavn>
 ```
@@ -47,7 +47,7 @@ Du vil få opp ett skjema for å opprette PR. Her kan du beskrive hvilke konkret
 
 :pencil2: Merge pull request inn i `main`. Dette gjør du i `Conversations`-fanen.
 
-:bulb: Det er lurt å slette branch etter en har merget den inn i `main`. Da slipper man rot i remote repository. Etter du har merget en pull request, får du opp en knapp for dette.
+Det er lurt å slette branch etter en har merget den inn i `main`. Da slipper man rot i remote repository. Etter du har merget en pull request, får du opp en knapp for dette.
 
 ---
 
