@@ -1,6 +1,6 @@
 # Oppgave 2 - Brancher og konflikter
 
-## :bulb: Mål med Oppgave 2
+## Mål med Oppgave 2
 
 Etter denne oppgaven skal du kunne å:
 
@@ -40,7 +40,7 @@ export const greeting = (firstname: string, lastname: string) => {
 };
 ```
 
-:bulb: `git diff` er nyttig når du vil se en liten diff. Skal du inspisere en større diff, er det lurt å bruke verkøyet i VS Code eller tilsvarende verktøy i andre editorer/IDEer. Under ser du hvor du finner git-verktøyet i VS Code. Du finner git-verktøyet i VS Code ved å trykke på følgende ikon: 
+`git diff` er nyttig når du vil se en liten diff. Skal du inspisere en større diff, er det lurt å bruke verkøyet i VS Code eller tilsvarende verktøy i andre editorer/IDEer. Under ser du hvor du finner git-verktøyet i VS Code. Du finner git-verktøyet i VS Code ved å trykke på følgende ikon: 
 
 ![alt text](../images/2-vscode-git-icon.png)
 
@@ -56,7 +56,7 @@ export const greeting = (firstname: string, lastname: string) => {
 
 ## 2.2 - Merging av brancher
 
-:bulb: Når vi arbeider sammen, gjør vi gjerne endringer i en branch og merger til en sentral branch (`main` eller `master`). Slik kan vi skille ferdig og uferdig kode, og kan arbeide fritt i egen branch frem til arbeidet vårt er klart til å gå inn i sentral branch (og videre ut til produksjon).
+Når vi arbeider sammen, gjør vi gjerne endringer i en branch og merger til en sentral branch (`main` eller `master`). Slik kan vi skille ferdig og uferdig kode, og kan arbeide fritt i egen branch frem til arbeidet vårt er klart til å gå inn i sentral branch (og videre ut til produksjon).
 
 :pencil2: Ta inn endringene du gjorde i `feature-branch-1` inn i `main` branch. Kommandoene under viser hvordan du sjekker ut `main` branch, og deretter fletter inn endringene fra din feature-branch.
 
@@ -65,7 +65,7 @@ git checkout main
 git merge feature-branch-1
 ```
 
-:bulb: Om du har vært borti merging før, forventet du kanskje at det skulle opprettes en merge-commit? Siden vi ikke har noe arbeid i `main` branch som gjør at historien skiller seg (og historien forblir lineær), vil vi få en "fast-forward"-merge, og det vil ikke lages en merge-commit.
+Om du har vært borti merging før, forventet du kanskje at det skulle opprettes en merge-commit? Siden vi ikke har noe arbeid i `main` branch som gjør at historien skiller seg (og historien forblir lineær), vil vi få en "fast-forward"-merge, og det vil ikke lages en merge-commit.
 
 ## 2.3 - Konflikter
 
@@ -99,9 +99,7 @@ Videre skal vi merge `feature-branch-4` inn i `main` branch. Vi skal løse konfl
   <img src="../images/2-ready-for-conflict-resolvement.png" alt="Alt Text" width="800">
 </div>
 
-
-:bulb: Du vil få opp 3 vinduer. Ett vindu til venstre med tittel `Incoming`. Dette er endringene fra branchen som skal inn i `main`. Du har ett vindu som heter `Current`, som er innholdet i main. Til slutt har du et `Result`-vindu nederst som viser hvordan endelig merge ser ut. 
-
+Du vil få opp 3 vinduer. Ett vindu til venstre med tittel `Incoming`. Dette er endringene fra branchen som skal inn i `main`. Du har ett vindu som heter `Current`, som er innholdet i main. Til slutt har du et `Result`-vindu nederst som viser hvordan endelig merge ser ut. 
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/2-conflict-merge.png" alt="Alt Text" width="800">
@@ -117,13 +115,11 @@ Videre skal vi merge `feature-branch-4` inn i `main` branch. Vi skal løse konfl
   <img src="../images/2-git-log-merge-commit.png" alt="Alt Text" width="500">
 </div>
 
-:bulb: Nå har vi merget en branch med konflikter inn i `main`. En god strategi er å holde din feature-branch oppdatert mot `main` og løse konflikter den veien. Da har du anledning til å løse konflikten og påse at innholdet i feature-branchen din fungere som det skal, og slipper konflikter for `main`.
+Nå har vi merget en branch med konflikter inn i `main`. En god strategi er å holde din feature-branch oppdatert mot `main` og løse konflikter den veien. Da har du anledning til å løse konflikten og påse at innholdet i feature-branchen din fungere som det skal, og slipper konflikter for `main`.
 
-:bulb: Av og til er det ikke så enkelt at man kan velge fra `Incoming` eller `Current`, da en kanskje vil ha litt fra hver side. Det går an å klippe og lime inn i `Result` vinduet fra de to andre vinduene for å gjennomføre merge. Eksempelvis kan en akseptere en side, og kopiere det man trenger fra den andre siden. 
+Av og til er det ikke så enkelt at man kan velge fra `Incoming` eller `Current`, da en kanskje vil ha litt fra hver side. Det går an å klippe og lime inn i `Result` vinduet fra de to andre vinduene for å gjennomføre merge. Eksempelvis kan en akseptere en side, og kopiere det man trenger fra den andre siden. 
 
-
-:bulb: Når du merger en branch, oppretter vi en egen commit i git-historikken som beskriver endringene i commitene du merger inn. Dette fungere som en bro mellom historikken i de 2 forskjellige branchene og gjør at vi får en felles historikk i branchen i merger inn i.
-
+Når du merger en branch, oppretter vi en egen commit i git-historikken som beskriver endringene i commitene du merger inn. Dette fungere som en bro mellom historikken i de 2 forskjellige branchene og gjør at vi får en felles historikk i branchen i merger inn i.
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/2-git-history.png" alt="Alt Text" width="700">
