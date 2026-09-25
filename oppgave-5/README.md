@@ -4,7 +4,7 @@
 
 I denne oppgaven skal vi se på litt diverse funksjonalitet i git, uten at det følger en tråd. Her er du litt mer på egen hånd; sjekk dokumentasjonen, og lær gjerne kommandoene her utover det som er beskrevet i oppgavene. 
 
-### 5.1 - Sletting av lokale brancher
+## 5.1 - Sletting av lokale brancher
 
 Det kan fort hope seg opp med brancher. Det er vanlig å slette disse eksempelvis når en merger en pull request, men lokale brancher kan bli liggende. Brancher kan slettes lokalt ved å bruke kommandoen `git branch -D <branchnavn>`, der du erstatter `<branchnavn>` med navn på branch du vil slette.
 
@@ -12,7 +12,7 @@ Det kan fort hope seg opp med brancher. Det er vanlig å slette disse eksempelvi
 
 :pencil2: Bonus: Sjekk i dokumentasjonen forskjellen på `-d` og `-D`-flagg når du sletter branch.
 
-### 5.2 - Du vil ta vare på endringene dine uten å lage en commit (git stash)
+## 5.2 - Du vil ta vare på endringene dine uten å lage en commit (git stash)
 
 Du kan bruke `git stash` for å midlertidig lagre endringer i en branch uten å commite de. Eksempelvis, om du holder på med noe i en branch, men trenger å bytte til en annen branch raskt, kan du stashe endringene dine. Sjekk dokumentasjon for `git stash` her: https://git-scm.com/docs/git-stash
 
@@ -28,7 +28,7 @@ For å stashe filer som ikke er sporet i repositoriet enda, kan du legge til `-u
 :pencil2: Sjekk dokumentasjonen, og finn ut hvordan du kan applisere siste innslag i stashet inn i en ny branch. 
 
 
-### 5.3 - Sjekke ut tidligere commit
+## 5.3 - Sjekke ut tidligere commit
 
 :bulb: Av og til trenger vi å gå tilbake i tid (eksempelvis, om en har en feil i produksjon og trenger å finne ut når denne har inntruffet, eller at har et behov for å se hvordan koden så ut en gang i fortiden).
 
@@ -36,7 +36,7 @@ For å sjekke ut en tidligere commit, kan du bruke kommando `git checkout <sha>`
 
 :pencil2: Sjekk ut en tidligere commit. Hopp deretter tilbake til HEAD.
 
-### 5.4 - Du vil flytte en commit fra en branch til en annen
+## 5.4 - Du vil flytte en commit fra en branch til en annen
 
 `git cherry-pick` er en nyttig kommando om du ønsker å flytte en commit fra en branch til en annen (uten merge e.l.). `git cherry-pick` vil prøve å applisere commiten direkte som en egen isolert commit i branchen du står på. 
 
@@ -44,28 +44,29 @@ For å sjekke ut en tidligere commit, kan du bruke kommando `git checkout <sha>`
 
 Cherry-picking er nyttig når du kun trenger deler av koden fra en annen branch, som gjerne er isolert i en commit. Overbruk av cherry-picking kan føre til dupliserte commits i historikken.
 
-### 5.5 - Revertering av endring
+## 5.5 - Revertering av endring
 
 Av og til går ting skeis, og vi trenger å revertere en endring i repositoriet vårt. Eksempelvis, om en commit har blitt merget som fører til feil i produksjon. 
 
 For å revertere en commit, kan du bruke kommando `git revert <sha>`, der `<sha>` er sha-hashen til en commit. Sha-hashen finner du i historikken din ved å bruke `git log`. 
 
-Under vises siste commit fra `git log`. Skulel jeg ønske å revertere denne, kan jeg bruke kommando `git revert df47dd477b1ed2c3f93fce1c747a0a5090a00962`. Det vil da opprettes en egen revert-commit som reverserer endringene. 
+Under vises siste commit fra `git log`. Skulle jeg ønske å revertere denne, kan jeg bruke kommando `git revert df47dd477b1ed2c3f93fce1c747a0a5090a00962`. Det vil da opprettes en egen revert-commit som reverserer endringene. 
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/5-pre-revert.png" width="500">
 </div>
 
-Når du reverserer, vil du få opp et editor-vindu der du kan beskrive revert-commiten. Som regel holder det å lagre og lukke denne filen, da standard melding ofte er god nok. Når siste commit er reversert, ser historikken slik ut
+Når du reverserer, vil du få opp et editor-vindu der du kan beskrive revert-commiten. Som regel holder det å lagre og lukke denne filen, da standard melding ofte er god nok. Når siste commit er reversert, ser historikken slik ut:
+
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/5-post-revert.png" width="500">
 </div>
 
 :pencil2: Sjekk ut en branch. Gjør en endring og opprett en commit. Reverser så denne commiten.
 
-### 5.6 - Nyttige kommandoer
+## 5.6 - Bonus: Nyttige ressurser
 
-Du er nå ved veis ende. Veldig bra jobba!! 
+Du er nå ved veis ende for git-delen av workshopen. Veldig bra jobba!!
 
 #### :star: Bonusoppgave
 

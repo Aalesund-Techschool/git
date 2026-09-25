@@ -6,11 +6,11 @@ Etter denne oppgaven skal du kunne å:
 
 - Konfigurere git på egen maskin
 - Lære noen av de mest brukte kommandoene i CLIen:
-  - `git init` (Initialisere git-repository som spores både lokalt og på Github)
+  - `git init` (Initialisere et lokalt git-repository)
   - `git add` (Legge til filer i staging-området)
   - `git commit` (Commit'e filer til i lokalt repository)
-  - `git push` (Push'e filer til remote repository)
-  - `git pull` (Hente filer fra remote repository)
+  - `git push` (Push'e commits til remote repository på Github)
+  - `git pull` (Hente commits fra remote repository)
 
 ## 1.1 - Oppsett av git-config
 

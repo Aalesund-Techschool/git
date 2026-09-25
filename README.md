@@ -6,7 +6,7 @@ I denne workshop'en skal vi innom git i kommandolinjen, der vi går igjennom de 
 
 Dette oppgavesettet er laget for å kunne gjennomføres i flere workshops. 
 - Oppgavene 1 - 5 omhandler bruk av git og en introduksjon til Github. 
-- Oppgavene 6 - 8 omhandler bruk av Github Actions for å etablere en continuous integration pipline for automatisk sjekk av kodekvalitet / bygg.
+- Oppgavene 6 - 8 omhandler bruk av Github Actions for å etablere en continuous integration pipeline for automatisk sjekk av kodekvalitet / bygg.
 
 
 ## Oppsett på egen maskin
@@ -27,7 +27,7 @@ Du står fritt til å bruke den kode-editoren du selv foretrekker, men vi anbefa
 - Selv om du har denne filen (`README.md`) på egen maskin om du har klonet ned repoet, er det enklere å lese på Github med tanke på formattering. Vi anbefaler derfor at du bruker nettleser til å lese oppgavene.
 - Start på oppgave 1, og spør gjerne om det er noe som er uklart eller noe du ønsker å diskutere.
 
-:exclamation: Vi skal ikke bruke GUI-klienten i denne workshopen. Her skal vi bruke terminal/CLI. Det er lurt å unngå klipp-og-lim for å bli vandt til å skrive git-kommandoer, selv om det kan oppleves som tungvindt i starten. Etterhvert som en får det inn i fingrene, blir bruk av CLI-verktøyet en effektiv måte å jobbe på.
+:exclamation: Vi skal ikke bruke en GUI-klient for git-kommandoer i denne workshopen. Alle git-kommandoer skriver vi i terminal/CLI. Visual Studio Code bruker vi kun til å se på diff og løse merge-konflikter. Det er lurt å unngå klipp-og-lim for å bli vant til å skrive git-kommandoer, selv om det kan oppleves som tungvint i starten. Etterhvert som en får det inn i fingrene, blir bruk av CLI-verktøyet en effektiv måte å jobbe på.
 
 ## Øvelser
 
@@ -41,12 +41,3 @@ Dette repositoriet har et sett med øvelser organisert i kataloger. Hver katalog
 - [Oppgave 6](oppgave-6/README.md)
 - [Oppgave 7](oppgave-7/README.md)
 - [Oppgave 8](oppgave-8/README.md)
-
-#### Diff blocks
-
-En diff-block vil vise om det er tekst som skal legges til eller fjernes (`-` fjernes, `+` legges til)
-
-```diff
-- this text was removed
-+ and replaced with this text
-```

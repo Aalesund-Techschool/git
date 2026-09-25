@@ -1,4 +1,4 @@
-# Oppave 3 - Bruk av Github
+# Oppgave 3 - Bruk av Github
 
 ## Mål med Oppgave 3
 
@@ -6,18 +6,19 @@ Når en arbeider på systemer som må fungere til enhver tid, er pull requests o
 
 Dette er en fri oppgave. Målet er at du bruker tid til å bli kjent med hvordan en oppretter pull requests (PR), skriver kommentarer og foretar en pull request review.
 
-### 3.1 Opprette pull request
+## 3.1 - Opprette pull request
 
 :pencil2: Sjekk ut en ny branch med et navn du velger selv. Opprett en ny fil med noe innhold, og sjekk denne inn med en commit i branchen.
 
-Når du forsøker å pushe en branch for første gang til remote repository, vil første gang få en feilmelding om at den ikke har en "upstream branch". Her forteller Git deg hva du må gjøre for at branchen din skal spores i remote repository 
+Når du forsøker å pushe en branch til remote repository for første gang, får du en feilmelding om at den ikke har en "upstream branch". Her forteller Git deg hva du må gjøre for at branchen din skal spores i remote repository:
+
 ```
 git push --set-upstream origin <branchnavn>
 ```
 
 :pencil2: Push branch til remote repository.
 
-Det er flere snarveier for å komme inn i grensesnittet for å opprette pull request. Når du pusher endring git remote repository, får du opp i terminalen din en lenke du kan gå til for å opprette PR. Alternativt, dersom du nylig har pushet til en branch, vil du få en pop-up om å opprette en pull request fra den branchen. 
+Det er flere snarveier for å komme inn i grensesnittet for å opprette pull request. Når du pusher endringer til remote repository, får du opp i terminalen din en lenke du kan gå til for å opprette PR. Alternativt, dersom du nylig har pushet til en branch, vil du få en pop-up om å opprette en pull request fra den branchen. 
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/3-pr-popup.png" width="600">
