@@ -77,9 +77,15 @@ Når en er flere som arbeider sammen, ender man ofte opp med å jobbe i samme fi
 
 Vi har nå 2 brancher fra `main` med hver sin commit, der begge endrer samme fil. Vi har laget en kunstig situasjon der vi "går i beina på hverandre". 
 
-<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
-  <img src="../images/2-dual-feature-branch.png" alt="Alt Text" width="600">
-</div>
+```mermaid
+gitGraph
+   commit id: "last commit"
+   branch feature-branch-3
+   commit id: "fb3 commit"
+   checkout main
+   branch feature-branch-4
+   commit id: "fb4 commit"
+```
 
 :pencil2: Sjekk ut `main` branch og merge `feature-branch-3` inn i `main`:
 
@@ -90,9 +96,14 @@ git merge feature-branch-3
 
 Historikken vår bør se slik ut. Git bør ha kjørt en fast-forward når du merget, og commiten fra `feature-branch-3` ligger nå rett i `main`.
 
-<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
-  <img src="../images/2-dual-feature-branch-1-merged.png" alt="Alt Text" width="600">
-</div>
+```mermaid
+gitGraph
+   commit id: "last commit"
+   branch feature-branch-4
+   commit id: "fb4 commit"
+   checkout main
+   commit id: "fb3 commit"
+```
 
 Videre skal vi merge `feature-branch-4` inn i `main` branch. Vi skal løse konflikten slik at endringene fra `feature-branch-4` blir med videre. Dvs:
 - Output fra `greeting`-funksjonen starter med `Hei hei`.
@@ -143,10 +154,10 @@ Når git ikke kan fast-forwarde, opprettes det en egen merge-commit i historikke
 ```mermaid
 gitGraph
    commit id: "last commit"
-   commit id: "fb3 commit"
    branch feature-branch-4
    commit id: "fb4 commit"
    checkout main
+   commit id: "fb3 commit"
    merge feature-branch-4 id: "merge commit"
 ```
 

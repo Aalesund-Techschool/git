@@ -24,9 +24,14 @@ Vi skal nå sette oss i en situasjon lik før, der vi har behov for å merge end
 
 Historikken bør se slik ut, med en fast-forward merge fra `feature-branch-5` (`fb5 commit`). 
 
-<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
-  <img src="../images/4-first-merge.png" width="750">
-</div>
+```mermaid
+gitGraph
+   commit id: "last commit"
+   branch feature-branch-6
+   commit id: "fb6 commit"
+   checkout main
+   commit id: "fb5 commit"
+```
 
 Vi skal nå rebase historikken i `feature-branch-6`, slik at det tilsynelatende ser ut som vi har branchet ut fra endringene påført etter merge fra `feature-branch-5`.
 
@@ -42,9 +47,13 @@ git rebase main
 
 Historikken bør nå se slik ut. Vi kan nå enkelt merge inn endringene fra `feature-branch-6`. 
 
-<div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
-  <img src="../images/4-post-rebase.png" width="800">
-</div>
+```mermaid
+gitGraph
+   commit id: "last commit"
+   commit id: "fb5 commit"
+   branch feature-branch-6
+   commit id: "fb6 commit"
+```
 
 :pencil2: Sjekk ut `main` og merge endringene fra `feature-branch-6` inn i `main`. Siden vi har "lurt" git til å tro at vi jobbet over endringer vi egentlig hadde konflikt med, vil vi få en fast-forward-merge.
 
