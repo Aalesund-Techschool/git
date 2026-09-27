@@ -44,7 +44,7 @@ layout: cover
 - Hva er Git
 - Hvordan skiller Git seg fra andre versjonskontrollsystemer
 - Hvordan bruker vi Git
-- Git vs Github
+- Git vs GitHub
 - Demo / eksempler
 
 ---
@@ -160,7 +160,7 @@ sequenceDiagram
 - Kommandolinjeverktøy
   - Git bash, powershell/cmd, terminal
 - GUI-verktøy
-  - Github Desktop
+  - GitHub Desktop
   - SourceTree
   - IDE/editor-integrasjoner (Intellij, Visual Studio Code)
 - Begge deler kan brukes
@@ -180,10 +180,10 @@ sequenceDiagram
 
 ---
 
-# Git vs Github
+# Git vs GitHub
 
 - Git: Versjonskontrollsystem
-- Github: Web-basert tjeneste / "remote repository" for kode, inkl verktøy for team-arbeid
+- GitHub: Web-basert tjeneste / "remote repository" for kode, inkl verktøy for team-arbeid
   - Lagrer git-repositoriet ditt
   - Håndterer tilgangskontroll
   - Håndterer pull requests
@@ -217,9 +217,9 @@ sequenceDiagram
 
 ---
 
-# Github Issues
+# GitHub Issues
 
-- Issue tracker i Github
+- Issue tracker i GitHub
   - Rapporterte feil
   - Feature requests
   - Tilbakemeldinger
@@ -231,7 +231,7 @@ sequenceDiagram
 layout: center
 ---
 
-# Github Demo
+# GitHub Demo
 
 ---
 layout: center
