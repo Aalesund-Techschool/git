@@ -2,21 +2,21 @@
 
 ## Mål med Oppgave 1
 
-Etter denne oppgaven skal du kunne å:
+Etter denne oppgaven skal du kunne:
 
 - Konfigurere Git på egen maskin
 - Lære noen av de mest brukte kommandoene i CLIen:
   - `git init` (Initialisere et lokalt Git-repository)
   - `git add` (Legge til filer i staging-området)
   - `git commit` (Committe filer til lokalt repository)
-  - `git push` (Pushe commits fra staging-området til remote repository på GitHub)
+  - `git push` (Pushe commits fra lokalt repository til remote repository på GitHub)
   - `git pull` (Hente commits fra remote repository)
 
-## 1.1 - Oppsett av git-config
+## 1.1 - Oppsett av Git-config
 
-I denne seksjonen skal vi sette opp konfigurasjon som beskriver "hvem du er" i git. Du kan hoppe over denne delen om du allerede har gjort dette tidligere. Om `git config --global user.name` og `git config --global user.email` returnerer ditt navn og epost-adresse, er alt satt opp og du kan gå videre til neste seksjon.
+I denne seksjonen skal vi sette opp konfigurasjon som beskriver "hvem du er" i Git. Du kan hoppe over denne delen om du allerede har gjort dette tidligere. Om `git config --global user.name` og `git config --global user.email` returnerer ditt navn og epost-adresse, er alt satt opp og du kan gå videre til neste seksjon.
 
-:pencil2: Konfigurer navn og epost i git-konfigurasjonen din
+:pencil2: Konfigurer navn og epost i Git-konfigurasjonen din
 
 ```bash
 git config --global user.name "Ditt Navn"
@@ -84,7 +84,7 @@ Du har nå opprettet et Git-repository og lagt inn første commit via kommandoli
 
 Velg et passende navn under **`Repository name`** (Forslag: `techschool-git-workshop`). Ikke velg noen andre innstillinger, og trykk **`Create repository`**.
 
-Du vil komme til følgende skjermbilde, om du skal benytte deg av de nederste instruksene (**`push an existing repository from the command line`**)
+Du vil komme til følgende skjermbilde, og du skal benytte deg av de nederste instruksene (**`push an existing repository from the command line`**)
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/opprettet-repo.png" alt="Eksempel på oppretting av nytt repository" width="600">

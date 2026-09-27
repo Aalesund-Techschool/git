@@ -2,7 +2,7 @@
 
 ## Mål med Oppgave 2
 
-Etter denne oppgaven skal du kunne å:
+Etter denne oppgaven skal du kunne:
 
 - Opprette brancher
 - Merge brancher
@@ -42,11 +42,11 @@ export const greeting = (firstname: string, lastname: string) => {
 };
 ```
 
-`git diff` er nyttig når du vil se en liten diff. Skal du inspisere en større diff, er det lurt å bruke verkøyet i VS Code eller tilsvarende verktøy i andre editorer/IDEer. Under ser du hvor du finner Git-verktøyet i VS Code, ved å trykke på følgende ikon i sidebaren:
+`git diff` er nyttig når du vil se en liten diff. Skal du inspisere en større diff, er det lurt å bruke verktøyet i VS Code eller tilsvarende verktøy i andre editorer/IDEer. Under ser du hvor du finner Git-verktøyet i VS Code, ved å trykke på følgende ikon i sidebaren:
 
 ![Git-ikon i VSCode](../images/2-vscode-git-icon.png)
 
-:pencil2: Sjekk diff i VS code
+:pencil2: Sjekk diff i VS Code
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/2-vscode-diff.png">
@@ -140,7 +140,7 @@ Du vil få opp 3 vinduer. Ett vindu til venstre med tittel `Incoming`, som viser
 
 :pencil2: Velg `Accept Incoming` i `Incoming`-vinduet for å velge riktig side.  Klikk deretter `Complete Merge`.
 
-:pencil2: For å fullføre merge går du i terminalen din for å stage filen du har merget med `git add index.ts`. Fullfør deretter mergen med kommandoen `git merge --continue`. Du vil få opp et editor-vindu, der du kan beskrive merge-committen nærmere (som en commit-melding). Lukk dette vinduet for å lagre og godta merge-committen.
+:pencil2: For å fullføre merge går du i terminalen din for å stage filen du har merget med `git add index.ts`. Fullfør deretter mergen med kommandoen `git merge --continue`. Du vil få opp et editor-vindu, der du kan beskrive merge-committen nærmere (som en commit-melding). Lagre og lukk dette vinduet for å godta merge-committen.
 
 :pencil2: Sjekk `git log`. Du bør nå ha en merge-commit i loggen din.
 

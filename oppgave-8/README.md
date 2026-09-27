@@ -35,7 +35,7 @@ Eksempel (tillegg nederst i eksisterende job):
             "$WEBHOOK_URL"
 ```
 
-Her henter vi secret fra GitHub sin secret storage og setter den i en miljøvariabel i jobb-steget, for så å bruke URLen til å curle et endepunkt (curl er et vanlig brukt terminal-program for å utføre HTTP-kall). `GITHUB_REPOSITORY` er en miljøvariabel GitHub Actions alltid setter, med navnet på repoet (`<eier>/repo`).
+Her henter vi secret fra GitHub sin secret storage og setter den i en miljøvariabel i jobb-steget, for så å bruke URLen til å curle et endepunkt (curl er et vanlig brukt terminal-program for å utføre HTTP-kall). `GITHUB_REPOSITORY` er en miljøvariabel GitHub Actions alltid setter, med navnet på repoet (`<eier>/<repo>`).
 
 :bulb: Merk at JSON-teksten står i doble anførselstegn (`"`). Hadde vi brukt enkle anførselstegn (`'`), ville ikke shellet byttet ut `$GITHUB_REPOSITORY` med verdien, og Discord hadde vist den bokstavelige teksten `$GITHUB_REPOSITORY`.
 

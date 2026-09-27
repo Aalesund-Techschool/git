@@ -21,7 +21,7 @@ Git er et versjonskontrollsystem som brukes lokalt på din maskin, mens GitHub e
 
 Sørg for at Git er installert på maskinen din og er tilgjengelig fra kommandolinje/terminal.
 
-Om du alt har Git installert, kan du hoppe over dette steget. I Windows, sjekk om du har programmet Git Bash installert. Er du på Mac OS eller Linux, kan du sjekke om Git er tilgjengelig med å skrive `git version` i terminalen din.
+Om du alt har Git installert, kan du hoppe over dette steget. I Windows, sjekk om du har programmet Git Bash installert. Er du på macOS eller Linux, kan du sjekke om Git er tilgjengelig med å skrive `git version` i terminalen din.
 
 :bulb: Har du ikke Git installert, finner du oppskrift for å installere på alle operativsystemer her: <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>
 
@@ -31,12 +31,12 @@ Du står fritt til å bruke den kode-editoren eller IDEen du selv foretrekker, m
 
 :exclamation: Merk at vi bruker Visual Studio Code i workshopen.
 
-## Kom igang
+## Kom i gang
 
-- Selv om du har denne filen (`README.md`) på egen maskin om du har klonet ned repoet, er det enklere å lese på GitHub med tanke på formattering. Vi anbefaler derfor at du bruker nettleser til å lese oppgavene.
+- Selv om du har denne filen (`README.md`) på egen maskin om du har klonet ned repoet, er det enklere å lese på GitHub med tanke på formatering. Vi anbefaler derfor at du bruker nettleser til å lese oppgavene.
 - Start på oppgave 1, og spør gjerne om det er noe som er uklart eller noe du ønsker å diskutere.
 
-:exclamation: Vi skal ikke bruke en GUI-klient for git-kommandoer i denne workshopen. Alle Git-kommandoer skriver vi i terminal/CLI. Visual Studio Code bruker vi kun til å se på diff og løse merge-konflikter. Det er lurt å unngå klipp-og-lim for å bli vant til å skrive git-kommandoer, selv om det kan oppleves som tungvint i starten. Etterhvert som en får det inn i fingrene blir bruk av CLI-verktøy en veldig effektiv måte å jobbe på.
+:exclamation: Vi skal ikke bruke en GUI-klient for Git-kommandoer i denne workshopen. Alle Git-kommandoer skriver vi i terminal/CLI. Visual Studio Code bruker vi kun til å se på diff og løse merge-konflikter. Det er lurt å unngå klipp-og-lim for å bli vant til å skrive Git-kommandoer, selv om det kan oppleves som tungvint i starten. Etterhvert som en får det inn i fingrene blir bruk av CLI-verktøy en veldig effektiv måte å jobbe på.
 
 ## Øvelser
 

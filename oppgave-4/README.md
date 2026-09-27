@@ -2,7 +2,7 @@
 
 ## Mål med Oppgave 4
 
-Etter denne oppgaven skal du kunne å:
+Etter denne oppgaven skal du kunne:
 
 - Bruke `git rebase` for å flette endringer
 - Bruke `git rebase` i interaktiv-modus
@@ -10,7 +10,7 @@ Etter denne oppgaven skal du kunne å:
 
 ## 4.1 - Git rebase
 
-Git rebase er en måte å skrive om historikken på, slik vi kan flytte commits fra en branch til toppen av en annen branch, slik at historikken blir lineær. Vi skriver om historikken slik at endringene våre tilsynelatende ser ut til å ta utgangspunkt i den nyeste versjonen av branchen vi rebaser mot, selv om utgangspunktet den gangen vi lagde branchen var en eldre versjon.
+Git rebase er en måte å skrive om historikken på, slik at vi kan flytte commits fra en branch til toppen av en annen branch, slik at historikken blir lineær. Vi skriver om historikken slik at endringene våre tilsynelatende ser ut til å ta utgangspunkt i den nyeste versjonen av branchen vi rebaser mot, selv om utgangspunktet den gangen vi lagde branchen var en eldre versjon.
 
 Vi skal nå sette oss i en situasjon lik den vi hadde i oppgave 2, der vi har behov for å merge endringer. I stedet for å bruke `git merge`, skal vi nå bruke `git rebase` for å rebase den andre branchen vi vil merge inn for å unngå konflikter i `main`. I dette tilfellet skal vi ikke merge begge brancher direkte mot `main`, men merge 1 branch først, og deretter rebase den andre branchen mot `main` for å løse konflikten i feature-branchen og dermed unngå konflikter i `main`.
 

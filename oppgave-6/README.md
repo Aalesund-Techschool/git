@@ -6,7 +6,7 @@ I denne oppgaven skal vi se på hvordan vi kan knytte kjøring av jobber til kod
 
 I de neste oppgavene skal vi se på continuous integration i GitHub Actions, der vi skal lage et oppsett for å kjøre automatiske sjekker på om koden vår er god nok til å merges inn i `main`.
 
-**Om du starter her, initialiser et tomt repository og push dette til github.com. Om du har fulgt de andre oppgavene, kan du fortsette i samme repository.**
+**Om du starter her, initialiser et repository med minst én fil og push dette til github.com. Om du har fulgt de andre oppgavene, kan du fortsette i samme repository.**
 
 ## 6.1 - Oppsett av GitHub Actions
 

@@ -14,9 +14,9 @@ Det kan fort hope seg opp med brancher. Det er vanlig å slette disse eksempelvi
 
 ## 5.2 - Du vil ta vare på endringene dine uten å lage en commit (git stash)
 
-Du kan bruke `git stash` for å midlertidig lagre endringer i en branch uten å commite de. Eksempelvis, om du holder på med noe i en branch, men trenger å bytte til en annen branch raskt, kan du stashe endringene dine. Sjekk dokumentasjon for `git stash` her: https://git-scm.com/docs/git-stash
+Du kan bruke `git stash` for å midlertidig lagre endringer i en branch uten å commite de. Eksempelvis, om du holder på med noe i en branch, men trenger å bytte til en annen branch raskt, kan du stashe endringene dine. Sjekk dokumentasjon for `git stash` her: <https://git-scm.com/docs/git-stash>
 
-:pencil2: Gjør en endring i `index.ts`. Sjekk at endringen er registrert ved å bruke `git status`. Stash endringene dine med kommando `git stash`. Om du sjekker `git status` på ny, vil ikke endringene dine lengre vise.
+:pencil2: Gjør en endring i `index.ts`. Sjekk at endringen er registrert ved å bruke `git status`. Stash endringene dine med kommando `git stash`. Om du sjekker `git status` på ny, vil ikke endringene dine lenger vises.
 
 - For å se hva du har liggende i stashet, kan du skrive `git stash list`.
 - For å plukke ut igjen siste endring du har stashet, kan du bruke kommando `git stash pop`
@@ -31,31 +31,35 @@ For å stashe filer som ikke er sporet i repositoriet enda, kan du legge til `-u
 
 En annen måte å hoppe mellom branches uten å først måtte committe eller stashe endringene dine er å bruke `git worktree`. Denne kommandoen lar deg ha flere arbeidsområder i samme repository, og du kan dermed jobbe med forskjellige versjoner av koden samtidig.
 
-Se for deg at du sitter i din egen branch og jobber med en feature. Plutselig får du beskjed om at en kollega har en pull request liggende klar for review, og du må sjekke ut denne. Du kan da bruke `git worktree` for å opprette et nytt arbeidsområde for denne branchen, og dermed slippe å stashe eller committe endringene dine i din egen branch. Når du er ferdig med å se på pull requesten kan du bare lukke arbeidsområdet og gå tilbake til din egen branch.
+Se for deg at du sitter i din egen branch og jobber med en feature. Plutselig får du beskjed om at en kollega har en pull request liggende klar for review, og du må sjekke ut denne. Du kan da bruke `git worktree` for å opprette et nytt arbeidsområde for denne branchen, og dermed slippe å stashe eller committe endringene dine i din egen branch. Når du er ferdig med å se på pull requesten kan du fjerne worktreet, og fortsette å jobbe i din egen branch.
 
-Når du oppretter et nytt worktree for en branch, vil du få en ny undermappe i repositoriet ditt. Denne mappen vil inneholde alle filene i branchen du har opprettet worktree for. Du kan da jobbe med denne branchen som om det var et helt eget repository.
+Når du oppretter et nytt worktree for en branch, vil du få en ny mappe ved siden av repositoriet ditt. Denne mappen vil inneholde alle filene i branchen du har opprettet worktree for. Du kan da jobbe med denne branchen som om det var et helt eget repository.
 
-:pencil2: Opprett en ny worktree for en eksisterende branch.
+:pencil2: Opprett en ny branch (eller bruk en eksisterende branch om du har en), og lag et nytt worktree for å jobbe i denne branchen.
 
 ```bash
 git worktree add <path> <branch>
 ```
 
-Her er `<path>` mappen worktreet vil ligge i, og `<branch>` er branchen du vil opprette et worktree for. Du kan også opprette en ny branch med `-b` flagget, som når du bruker `git checkout`.
+Her er `<path>` mappen worktreet vil ligge i, og `<branch>` er branchen du vil opprette et worktree for. Du kan også opprette en ny branch ved å legge til `-b` flagget, som når du bruker `git checkout`.
 
 :pencil2: Gjør en endring i worktreet. Stage og commit endringen, og sjekk at den er registrert i historikken til branchen du har opprettet worktreet for.
 
 En annen fordel med worktrees, som KI-agenter ofte benytter seg av, er at du kan arbeide aktivt i flere worktrees samtidig. Dette gjør at du for eksempel kan kjøre tester i en branch, og jobbe i en annen branch mens testene kjører. Slik kan du kutte ned på dødtid, og få mer tid til å jobbe med koden din.
 
+:pencil2: Rydd opp i worktrees du har opprettet. Du kan liste alle worktrees du har opprettet med kommando `git worktree list`. For å fjerne et worktree, kan du bruke kommando `git worktree remove <path>`, der `<path>` er mappen worktreet ligger i.
+
 For mer informasjon om `git worktree`, sjekk dokumentasjonen her: <https://git-scm.com/docs/git-worktree> og denne artikkelen fra GitHub: <https://github.blog/ai-and-ml/github-copilot/what-are-git-worktrees-and-why-should-i-use-them/>
 
 ## 5.4 - Sjekke ut tidligere commit
 
-:bulb: Av og til trenger vi å gå tilbake i tid (eksempelvis, om en har en feil i produksjon og trenger å finne ut når denne har inntruffet, eller at har et behov for å se hvordan koden så ut en gang i fortiden).
+:bulb: Av og til trenger vi å gå tilbake i tid (eksempelvis, om man har en feil i produksjon og trenger å finne ut når denne har inntruffet, eller at man har et behov for å se hvordan koden så ut en gang i fortiden).
 
 For å sjekke ut en tidligere commit, kan du bruke kommando `git checkout <sha>`, der du erstatter `<sha>` med commit-hashen til en tidligere commit. Commit-hashen kan du finne i historikken din ved å bruke `git log`. Når du sjekker ut en commit, står du i "Detached HEAD state", dvs, du har spolt deg tilbake i tid. Du kan eksempelvis se hvordan tilstanden til koden så ut her eller sjekke ut en branch fra dette punktet. For å hoppe tilbake til toppen av historikken (HEAD), kan du hoppe tilbake ved bruk av `git checkout -` eller `git checkout <branchnavn>`.
 
 :pencil2: Sjekk ut en tidligere commit. Hopp deretter tilbake til HEAD.
+
+:bulb: `git checkout -` bytter tilbake til forrige branch du var på. Dette er nyttig om du har sjekket ut en commit, og ønsker å hoppe tilbake til branchen du var på før du sjekket ut commiten.
 
 ## 5.5 - Du vil flytte en commit fra en branch til en annen
 
@@ -89,9 +93,9 @@ Når du reverserer, vil du få opp et editor-vindu der du kan beskrive revert-co
 
 Du er nå ved veis ende for Git-delen av workshopen. Veldig bra jobba!!
 
-#### :star: Bonusoppgave
+### :star: Bonusoppgave
 
-https://dangitgit.com og https://ohshitgit.com inneholder noen kommandoer som er nyttige å kunne. De lister opp noen konkrete feilscenarioer som kan slå ut når man bruker git, og hvordan en kan bruke CLI-verktøyet til å løse problemene som er listet opp.
+<https://dangitgit.com> og <https://ohshitgit.com> inneholder noen kommandoer som er nyttige å kunne. De lister opp noen konkrete feilscenarioer som kan slå ut når man bruker git, og hvordan en kan bruke CLI-verktøyet til å løse problemene som er listet opp.
 
 :pencil2: Gå over noen av scenarioene. Prøv å sett deg inn i en feilsituasjon, f.eks. med å commite til feil branch eller å bruke reflog. Kombiner med å slå opp i dokumentasjonen.
 
