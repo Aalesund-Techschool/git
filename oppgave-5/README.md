@@ -27,7 +27,29 @@ For å stashe filer som ikke er sporet i repositoriet enda, kan du legge til `-u
 
 :pencil2: Sjekk dokumentasjonen, og finn ut hvordan du kan applisere siste innslag i stashet inn i en ny branch.
 
-## 5.3 - Sjekke ut tidligere commit
+## 5.3 - Holde arbeidsområdene dine adskilt med Git worktree
+
+En annen måte å hoppe mellom branches uten å først måtte committe eller stashe endringene dine er å bruke `git worktree`. Denne kommandoen lar deg ha flere arbeidsområder i samme repository, og du kan dermed jobbe med forskjellige versjoner av koden samtidig.
+
+Se for deg at du sitter i din egen branch og jobber med en feature. Plutselig får du beskjed om at en kollega har en pull request liggende klar for review, og du må sjekke ut denne. Du kan da bruke `git worktree` for å opprette et nytt arbeidsområde for denne branchen, og dermed slippe å stashe eller committe endringene dine i din egen branch. Når du er ferdig med å se på pull requesten kan du bare lukke arbeidsområdet og gå tilbake til din egen branch.
+
+Når du oppretter et nytt worktree for en branch, vil du få en ny undermappe i repositoriet ditt. Denne mappen vil inneholde alle filene i branchen du har opprettet worktree for. Du kan da jobbe med denne branchen som om det var et helt eget repository.
+
+:pencil2: Opprett en ny worktree for en eksisterende branch.
+
+```bash
+git worktree add <path> <branch>
+```
+
+Her er `<path>` mappen worktreet vil ligge i, og `<branch>` er branchen du vil opprette et worktree for. Du kan også opprette en ny branch med `-b` flagget, som når du bruker `git checkout`.
+
+:pencil2: Gjør en endring i worktreet. Stage og commit endringen, og sjekk at den er registrert i historikken til branchen du har opprettet worktreet for.
+
+En annen fordel med worktrees, som KI-agenter ofte benytter seg av, er at du kan arbeide aktivt i flere worktrees samtidig. Dette gjør at du for eksempel kan kjøre tester i en branch, og jobbe i en annen branch mens testene kjører. Slik kan du kutte ned på dødtid, og få mer tid til å jobbe med koden din.
+
+For mer informasjon om `git worktree`, sjekk dokumentasjonen her: <https://git-scm.com/docs/git-worktree> og denne artikkelen fra GitHub: <https://github.blog/ai-and-ml/github-copilot/what-are-git-worktrees-and-why-should-i-use-them/>
+
+## 5.4 - Sjekke ut tidligere commit
 
 :bulb: Av og til trenger vi å gå tilbake i tid (eksempelvis, om en har en feil i produksjon og trenger å finne ut når denne har inntruffet, eller at har et behov for å se hvordan koden så ut en gang i fortiden).
 
@@ -35,7 +57,7 @@ For å sjekke ut en tidligere commit, kan du bruke kommando `git checkout <sha>`
 
 :pencil2: Sjekk ut en tidligere commit. Hopp deretter tilbake til HEAD.
 
-## 5.4 - Du vil flytte en commit fra en branch til en annen
+## 5.5 - Du vil flytte en commit fra en branch til en annen
 
 `git cherry-pick` er en nyttig kommando om du ønsker å flytte en commit fra en branch til en annen (uten merge e.l.). `git cherry-pick` vil prøve å applisere commiten direkte som en egen isolert commit i branchen du står på.
 
@@ -43,7 +65,7 @@ For å sjekke ut en tidligere commit, kan du bruke kommando `git checkout <sha>`
 
 Cherry-picking er nyttig når du kun trenger deler av koden fra en annen branch, som gjerne er isolert i en commit. Overbruk av cherry-picking kan føre til dupliserte commits i historikken.
 
-## 5.5 - Revertering av endring
+## 5.6 - Revertering av endring
 
 Av og til går ting skeis, og vi trenger å revertere en endring i repositoriet vårt. Eksempelvis, om en commit har blitt merget som fører til feil i produksjon.
 
@@ -63,7 +85,7 @@ Når du reverserer, vil du få opp et editor-vindu der du kan beskrive revert-co
 
 :pencil2: Sjekk ut en branch. Gjør en endring og opprett en commit. Reverser så denne commiten.
 
-## 5.6 - Bonus: Nyttige ressurser
+## 5.7 - Bonus: Nyttige ressurser
 
 Du er nå ved veis ende for Git-delen av workshopen. Veldig bra jobba!!
 
