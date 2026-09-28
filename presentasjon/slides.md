@@ -36,6 +36,12 @@ layout: cover
   - Kystverket
 
 **Discord**
+---
+
+# Hvem er vi
+
+- Marius Kalvø (Kystverket)
+- Magnus Grande (NTNU)
 
 ---
 
