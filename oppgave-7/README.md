@@ -2,9 +2,9 @@
 
 ## :bulb: Mål med Oppgave 7
 
-I denne oppgaven skal vi legge til kode for å kjøre bygg og enhetstester når vi lager pull requests. Til slutt setter vi opp en regel som sier at pipeline må kjøre uten feil før en pull request kan merges. 
+I denne oppgaven skal vi legge til kode for å kjøre bygg og enhetstester når vi lager pull requests. Til slutt setter vi opp en regel som sier at pipeline må kjøre uten feil før en pull request kan merges.
 
-Dette er i praksis en enkel continuous integration pipeline (CI), der vi kjører automatiske sjekker på om koden er god nok før vi merger den inn i `main` branch.
+Dette er i praksis en enkel continuous integration pipeline (CI), der vi kjører automatiske sjekker på om koden er god nok før vi merger den inn i `main`-branchen.
 
 ## 7.1 - Workflow - sjekke at en frontend-applikasjon bygger
 
@@ -16,9 +16,10 @@ Vi starter med å lage en workflow som sjekker at en liten frontend-applikasjon 
 
 :pencil2: Legg til filene, commit til `main` og push.
 
-:bulb: Applikasjonen er et lite Vite/TypeScript-prosjekt. Om du har Node installert, kan du prøve `npm install`, `npm run build` og `npm run test` i `code/app` lokalt for å se hva stegene under gjør.
+:bulb: Applikasjonen er et lite Vite/TypeScript-prosjekt. Om du har Node installert, kan du prøve `npm install`, `npm run build` og `npm run test` i `code/app` lokalt for å se hva stegene under gjør. Hvis ikke kan du fint hoppe over dette, og bare stole på at stegene i workflowen gjør det samme.
 
 ### 7.1.2 - Opprett workflow-fil
+
 :pencil2: Opprett filen `.github/workflows/frontend-build.yml` med innholdet under:
 
 ```yaml
@@ -49,22 +50,22 @@ jobs:
         run: npm run build
 ```
 
-Her er det et par nye ting fra workflowen i oppgave 6. 
+Her er det et par nye ting fra workflowen i oppgave 6.
 
 - Når vi legger til `paths` under trigger-typen, gjør det at workflowen kun trigges når noe under `code/app/` (eller selve workflow-filen) endres. Slik unngår vi unødvendige kjøringer.
 - `defaults.run.working-directory` gjør at alle `run`-steg kjører i riktig mappe, så vi slipper å oppgi full sti hver gang.
-- Steget `actions/checkout` henter ned koden og gjør den tilgjengelig i påfølgende steg. 
+- Steget `actions/checkout` henter ned koden og gjør den tilgjengelig i påfølgende steg.
 - Steget `actions/setup-node` installerer riktig Node-versjon og gjør den tilgjengelig i påfølgende steg.
-- Steget `npm ci` installerer dependencies definert i `package-lock.json`. Her bruker vi `npm ci` istedet for `npm install` (se https://docs.npmjs.com/cli/v11/commands/npm-ci).
+- Steget `npm ci` installerer dependencies definert i `package-lock.json`. Her bruker vi `npm ci` istedet for `npm install` (se <https://docs.npmjs.com/cli/v11/commands/npm-ci>).
 - Steget `npm run build` kjører script fra `package.json` som bygger løsningen.
 
-:pencil2: Commit ny workflow til `main` og push. Opprett så en pull request med en endring i `code/app`. Prøv gjerne å committe en endring der du lager en kompileringsfeil i koden, for å se at workflowen feiler, og deretter fiks opp i det og sjekk at workflowen går igjennom. 
+:pencil2: Commit den nye workflowen til `main` og push. Opprett så en pull request med en endring i `code/app`. Prøv gjerne å committe en endring der du lager en kompileringsfeil i koden, for å se at workflowen feiler, før du fikser den og ser at workflowen går igjennom.
 
-:bulb: Du kan bruke samme PR som du akkurat opprettet resten av workshopen, og committe nye endringer direkte i branchen din for å kjøre workflowen på nytt.
+:bulb: Du kan bruke samme PR som du akkurat opprettet i resten av workshopen, og committe nye endringer direkte i branchen din for å kjøre workflowen på nytt.
 
 ### 7.1.3 - Kjøring av tester
 
-I `code/app` har vi lagt til noen enhetstester (`src/fizzbuzz.test.ts`). 
+I `code/app` har vi lagt til noen enhetstester (`src/fizzbuzz.test.ts`).
 
 :pencil2: Legg til et steg i workflowen som kjører testene etter at `npm run build` er gjennomført. Kommandoen for dette er `npm run test`.
 
@@ -72,7 +73,7 @@ I `code/app` har vi lagt til noen enhetstester (`src/fizzbuzz.test.ts`).
 
 ### 7.1.4 - Auditing av pakker
 
-I de fleste applikasjoner bruker vi gjerne pakker/biblioteker som vi ikke har skrevet selv. For å sjekke at vi ikke tar med sikkerhetshull med oss i bygget fra disse pakkene, finnes det forskjellige verktøy for å analysere hva vi drar med oss av pakker. I NPM har vi et verktøy som heter `npm audit`. 
+I de fleste applikasjoner bruker vi gjerne pakker/biblioteker som vi ikke har skrevet selv. For å sjekke at vi ikke tar med sikkerhetshull med oss i bygget fra disse pakkene, finnes det forskjellige verktøy for å analysere hva vi drar med oss av pakker. I NPM har vi et verktøy som heter `npm audit`.
 
 :pencil2: Legg til et ekstra steg som kjører `npm audit --audit-level=high` for å feile på alvorlige sårbarheter.
 
@@ -82,16 +83,17 @@ I de fleste applikasjoner bruker vi gjerne pakker/biblioteker som vi ikke har sk
 
 Foreløpig kjører workflowen, men ingenting hindrer oss i å merge en PR der bygget feiler. Det kan vi styre med et *ruleset* på `main`.
 
-:pencil2: Gå til repoet ditt på Github -> Settings -> Rules -> Rulesets -> New ruleset -> New branch ruleset, og fyll ut:
+:pencil2: Gå til repoet ditt på GitHub -> Settings -> Rules -> Rulesets -> New ruleset -> New branch ruleset, og fyll ut:
+
 - Ruleset Name: `main`
 - Enforcement status: `Active`
 - Target branches: Add target -> Include default branch
 - Under Rules, huk av `Require status checks to pass`. Trykk `Add checks` og søk opp `build` (navnet på jobben i workflow-filen vår).
 - Trykk `Create` nederst.
 
-:pencil2: I PR-en din, lag en endring som gjør at bygget feiler, og push. Sjekk at merge-knappen nå er blokkert til sjekken er grønn. Fiks feilen, push, og merge PR-en.
+:pencil2: Lag en endring i PR-en din som gjør at bygget feiler, og push. Sjekk at merge-knappen nå er blokkert til sjekken er grønn. Fiks feilen, push, og merge PR-en.
 
-:bulb: Rulesets og branch protection er gratis på offentlige repositorier. På private repositorier krever det Github Pro eller Team. Om repoet ditt er privat og du ikke får lagt til regelen, kan du gjøre repoet offentlig under Settings -> General -> Danger Zone -> Change visibility, eller hoppe over dette steget.
+:bulb: Rulesets og branch protection er gratis på offentlige repositorier. På private repositorier krever det GitHub Pro eller Team. Om repoet ditt er privat og du ikke får lagt til regelen, kan du gjøre repoet offentlig under Settings -> General -> Danger Zone -> Change visibility, eller hoppe over dette steget.
 
 ---
 

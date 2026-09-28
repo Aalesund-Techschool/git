@@ -2,7 +2,7 @@
 
 ## Mål med Oppgave 2
 
-Etter denne oppgaven skal du kunne å:
+Etter denne oppgaven skal du kunne:
 
 - Opprette brancher
 - Merge brancher
@@ -12,17 +12,19 @@ Etter denne oppgaven skal du kunne å:
 
 ### 2.1.1 - Første commit
 
-Når en arbeider sammen, er det svært vanlig å bruke branches i Git. Når du lager en branch, bryter du ut i en egen gren fra hoved-branchen, der du kan arbeide fritt uten å påvirke andre sitt arbeid.
+Når en arbeider sammen med andre utviklere er det svært vanlig å bruke branches i Git. Når du lager en branch, bryter du ut i en egen gren fra hoved-branchen, der du kan arbeide fritt uten å påvirke andre sitt arbeid.
 
-:pencil2: Sjekk at du står i `main` branch (`git branch`) og sjekk deretter ut en ny branch med kommandoen `git checkout -b feature-branch-1`. Da vil du sjekke ut en ny branch med navn `feature-branch-1` som går ut fra branchen du sto på, `main`. Nå kan du fritt arbeide i denne branchen (og pushe branchen til et remote repository) og arbeide uforstyrret.
+:pencil2: Sjekk at du står i `main`-branchen (med kommandoen `git branch`) og sjekk deretter ut en ny branch med kommandoen `git checkout -b feature-branch-1`. Da vil du sjekke ut en ny branch med navn `feature-branch-1` som går ut fra branchen du sto på: `main`. Nå kan du fritt arbeide i denne branchen (og pushe branchen til et remote repository) og arbeide uforstyrret.
 
-:pencil2: Opprett en fil som heter `index.ts` i repositoriet ditt og legg følgende innhold inn i filen. Sjekk filen inn i lokalt repository med en passende commit-melding.
+:pencil2: Opprett en fil som heter `index.ts` i repositoriet ditt og legg følgende innhold inn i filen. Sjekk filen inn i ditt lokale repository med en passende commit-melding.
 
 ```ts
 export const greeting = (name: string) => {
     console.log(`Hello ${name}`);
 };
 ```
+
+:bulb: Hvis du sitter på Windows kan .ts-filer ofte tolkes som video-filer (MPEG-2). I denne workshopen er ikke dette et problem, men om du bruker TypeScript i andre sammenhenger kan du etter hvert møte problemer med at Windows prøver å lage thumbnails av .ts-filer hver gang du åpner en mappe med de i. Å endre dette krever litt kunnskap om Windows Registry, men er fullt mulig dersom du Googler litt, eller spør KI :wink:
 
 ### 2.1.2 - Bruk av `git diff`
 
@@ -40,13 +42,11 @@ export const greeting = (firstname: string, lastname: string) => {
 };
 ```
 
-`git diff` er nyttig når du vil se en liten diff. Skal du inspisere en større diff, er det lurt å bruke verkøyet i VS Code eller tilsvarende verktøy i andre editorer/IDEer. Under ser du hvor du finner git-verktøyet i VS Code. Du finner git-verktøyet i VS Code ved å trykke på følgende ikon: 
+`git diff` er nyttig når du vil se en liten diff. Skal du inspisere en større diff, er det lurt å bruke verktøyet i VS Code eller tilsvarende verktøy i andre editorer/IDEer. Under ser du hvor du finner Git-verktøyet i VS Code, ved å trykke på følgende ikon i sidebaren:
 
-![alt text](../images/2-vscode-git-icon.png)
+![Git-ikon i VSCode](../images/2-vscode-git-icon.png)
 
-
-:pencil2: Sjekk diff i VS code
-
+:pencil2: Sjekk diff i VS Code
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
   <img src="../images/2-vscode-diff.png">
@@ -56,26 +56,26 @@ export const greeting = (firstname: string, lastname: string) => {
 
 ## 2.2 - Merging av brancher
 
-Når vi arbeider sammen, gjør vi gjerne endringer i en branch og merger til en sentral branch (`main` eller `master`). Slik kan vi skille ferdig og uferdig kode, og kan arbeide fritt i egen branch frem til arbeidet vårt er klart til å gå inn i sentral branch (og videre ut til produksjon).
+Når vi arbeider sammen med andre utviklere gjør vi gjerne endringer i en branch og merger til en sentral branch (ofte `main` eller `master`). Slik kan vi skille ferdig og uferdig kode, og kan arbeide fritt i egen branch frem til arbeidet vårt er klart til å gå inn i sentral branch (og videre ut til produksjon).
 
-:pencil2: Ta inn endringene du gjorde i `feature-branch-1` inn i `main` branch. Kommandoene under viser hvordan du sjekker ut `main` branch, og deretter fletter inn endringene fra din feature-branch.
+:pencil2: Ta inn endringene du gjorde i `feature-branch-1` inn i `main`-branchen. Kommandoene under viser hvordan du sjekker ut `main`-branchen, og deretter fletter inn endringene fra din feature-branch.
 
 ```sh
 git checkout main
 git merge feature-branch-1
 ```
 
-Om du har vært borti merging før, forventet du kanskje at det skulle opprettes en merge-commit? Siden vi ikke har noe arbeid i `main` branch som gjør at historien skiller seg (og historien forblir lineær), vil vi få en "fast-forward"-merge, og det vil ikke lages en merge-commit.
+Om du har vært borti merging før forventet du kanskje at det skulle opprettes en merge-commit. Siden vi ikke har noe arbeid i `main`-branchen som gjør at historien skiller seg (og historien forblir lineær), vil vi få en "fast-forward"-merge, og det vil ikke lages en merge-commit.
 
 ## 2.3 - Konflikter
 
-Når en er flere som arbeider sammen, ender man ofte opp med å jobbe i samme fil, og kan komme til å endre de samme delene av koden. Dette skjer relativt ofte når en arbeider i større team. For at git skal vite hvordan endringer skal konsolideres, må en løse eventuelle konflikter. Nå skal vi lage en kunstig konflikt, som vi skal løse.
+Når man er flere som arbeider sammen ender man ofte opp med å jobbe i samme fil, og kan komme til å endre de samme delene av koden. Dette skjer relativt ofte når en arbeider i større team. For at Git skal vite hvordan endringer skal slås sammen må en først løse eventuelle konflikter. Nå skal vi lage en kunstig konflikt, som vi skal løse.
 
 :pencil2: Sjekk ut en feature-branch, `feature-branch-3`, fra `main` branch. Erstatt innholdet i `index.ts` med innholdet i `code/2.3-endring-1.ts`. Sjekk endringene inn i en commit i branchen din.
 
-:pencil2: Sjekk ut `main` branch, og ut i fra `main` branch, opprett en ny branch, `feature-branch-4`. Erstatt innholdet i `index.ts` med innholdet i `code/2.3-endring-2.ts`. Sjekk endringene inn i en commit i branchen din.
+:pencil2: Sjekk ut `main`-branchen og opprett en ny branch, `feature-branch-4`, ut i fra `main`-branchen. Erstatt innholdet i `index.ts` med innholdet i `code/2.3-endring-2.ts`. Sjekk endringene inn i en commit i branchen din.
 
-Vi har nå 2 brancher fra `main` med hver sin commit, der begge endrer samme fil. Vi har laget en kunstig situasjon der vi "går i beina på hverandre". 
+Vi har nå 2 brancher fra `main` med hver sin commit, der begge endrer samme fil. Vi har laget en kunstig situasjon der vi "går i beina på hverandre".
 
 ```mermaid
 gitGraph
@@ -87,7 +87,7 @@ gitGraph
    commit id: "fb4 commit"
 ```
 
-:pencil2: Sjekk ut `main` branch og merge `feature-branch-3` inn i `main`:
+:pencil2: Sjekk ut `main`-branchen og merge `feature-branch-3` inn i `main`:
 
 ```sh
 git checkout main
@@ -105,9 +105,10 @@ gitGraph
    commit id: "fb3 commit"
 ```
 
-Videre skal vi merge `feature-branch-4` inn i `main` branch. Vi skal løse konflikten slik at endringene fra `feature-branch-4` blir med videre. Dvs:
+Videre skal vi merge `feature-branch-4` inn i `main`-branchen. Vi skal løse konflikten slik at endringene fra `feature-branch-4` blir med videre. Dvs:
+
 - Output fra `greeting`-funksjonen starter med `Hei hei`.
-- Det er 2 objekter i array'en `people`.
+- Det er 2 objekter i arrayet `people`.
 
 :pencil2: Stå i `main` og merge `feature-branch-4`. Denne gangen får du beskjed om at merge feilet på grunn av en konflikt:
 
@@ -115,7 +116,7 @@ Videre skal vi merge `feature-branch-4` inn i `main` branch. Vi skal løse konfl
 git merge feature-branch-4
 ```
 
-```
+```txt
 Auto-merging index.ts
 CONFLICT (content): Merge conflict in index.ts
 Automatic merge failed; fix conflicts and then commit the result.
@@ -123,33 +124,35 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 Om du kjører `git status` nå, ser du at `index.ts` ligger under `Unmerged paths`. Git har lagt inn konfliktmarkører (`<<<<<<<`, `=======`, `>>>>>>>`) i filen. Vi bruker VS Code til å løse konflikten.
 
-:pencil2: I git-verktøyet i VS Code, trykk på filen `index.ts` som under `Merge Changes`, og velg `Resolve in Merge Editor`
+:pencil2: I Git-verktøyet i VS Code, trykk på filen `index.ts` under `Merge Changes` og velg `Resolve in Merge Editor`
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
-  <img src="../images/2-ready-for-conflict-resolvement.png" alt="Alt Text" width="800">
+  <img src="../images/2-ready-for-conflict-resolvement.png" alt="Merge Editor-1" width="800">
 </div>
 
-Du vil få opp 3 vinduer. Ett vindu til venstre med tittel `Incoming`. Dette er endringene fra branchen som skal inn i `main`. Du har ett vindu som heter `Current`, som er innholdet i main. Til slutt har du et `Result`-vindu nederst som viser hvordan endelig merge ser ut. 
+Du vil få opp 3 vinduer. Ett vindu til venstre med tittel `Incoming`, som viser endringene fra branchen som skal inn i `main`. Du har ett vindu til høyre med tittel `Current`, som er innholdet i main, og til slutt har du et `Result`-vindu nederst som viser hvordan den resulterende mergen ser ut.
+
+:bulb: Ulike editorer og IDEer kan løse dette på forskjellige måter, men terminologien er som regel den samme.
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
-  <img src="../images/2-conflict-merge.png" alt="Alt Text" width="800">
+  <img src="../images/2-conflict-merge.png" alt="Merge Editor-2" width="800">
 </div>
 
-:pencil2: Velg `Accept Incoming` i `Incoming`-vinduet for å velge riktig side.  Klikk deretter `Complete Merge`. 
+:pencil2: Velg `Accept Incoming` i `Incoming`-vinduet for å velge riktig side.  Klikk deretter `Complete Merge`.
 
-:pencil2: For å fullføre merge, gå i terminalen din for å stage filen du har merget med `git add index.ts`. Fullfør deretter merge med kommando `git merge --continue`. Du vil få opp et editor-vindu, der du kan beskrive merge-commit nærmere. Lukk dette vinduet for å godta merge-commit. 
+:pencil2: For å fullføre merge går du i terminalen din for å stage filen du har merget med `git add index.ts`. Fullfør deretter mergen med kommandoen `git merge --continue`. Du vil få opp et editor-vindu, der du kan beskrive merge-committen nærmere (som en commit-melding). Lagre og lukk dette vinduet for å godta merge-committen.
 
-:pencil2: Sjekk `git log`. Du bør nå ha en merge-commit i loggen din. 
+:pencil2: Sjekk `git log`. Du bør nå ha en merge-commit i loggen din.
 
 <div style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">
-  <img src="../images/2-git-log-merge-commit.png" alt="Alt Text" width="500">
+  <img src="../images/2-git-log-merge-commit.png" alt="Merge Commit" width="500">
 </div>
 
-Nå har vi merget en branch med konflikter inn i `main`. En god strategi er å holde din feature-branch oppdatert mot `main` og løse konflikter den veien. Da har du anledning til å løse konflikten og påse at innholdet i feature-branchen din fungerer som det skal, og slipper konflikter i `main`. Dette ser vi nærmere på i oppgave 4.
+Nå har vi merget en branch med konflikter inn i `main`. En god strategi er å holde din feature-branch oppdatert mot `main` og løse konflikter før du merger inn i `main`. Da har du anledning til å løse konflikten og påse at innholdet i feature-branchen din fungerer som det skal, og slipper konflikter i `main`. Dette ser vi nærmere på i oppgave 4.
 
-Av og til er det ikke så enkelt at man kan velge fra `Incoming` eller `Current`, da en kanskje vil ha litt fra hver side. Det går an å klippe og lime inn i `Result` vinduet fra de to andre vinduene for å gjennomføre merge. Eksempelvis kan en akseptere en side, og kopiere det man trenger fra den andre siden. 
+Av og til er det ikke så enkelt at man kan velge fra `Incoming` eller `Current`, da en kanskje vil ha litt fra hver side. Det går an å klippe og lime inn i `Result` vinduet fra de to andre vinduene for å gjennomføre merge. Eksempelvis kan en akseptere en side, og kopiere det man trenger fra den andre siden.
 
-Når git ikke kan fast-forwarde, opprettes det en egen merge-commit i historikken. En merge-commit er spesiell ved at den har *to* foreldre: siste commit i branchen du sto i (`main`) og siste commit i branchen du merget inn (`feature-branch-4`). Den fungerer som en bro mellom historikken i de 2 branchene, slik at vi får en felles historikk i branchen vi merger inn i.
+Når Git ikke kan fast-forwarde opprettes det en egen merge-commit i historikken. En merge-commit er spesiell ved at den har *to* foreldre: siste commit i branchen du sto i (`main`) og siste commit i branchen du merget inn (`feature-branch-4`). Den fungerer som en bro mellom historikken i de 2 branchene, slik at vi får en felles historikk i branchen vi merger inn i.
 
 ```mermaid
 gitGraph

@@ -4,15 +4,16 @@
 
 Lære hvordan man lagrer og bruker hemmeligheter (secrets) i GitHub Actions uten å eksponere sensitiv informasjon i repo eller logger. Du skal ta inn en hemmelig URL (inkl. token) og bruke den til å kalle et webhook-endepunkt med POST.
 
-I denne oppgaven skal vi bruke URL for en Discord Webhook til å ringe til Discord for å si fra om bygget vårt gikk bra eller ikke. I URLen ligger det et token som vi ikke ønsker å sjekke inn i kode. Vi kan registrere denne verdien som en secret i Github, og den vil derfra være beskyttet. 
+I denne oppgaven skal vi bruke URL for en Discord Webhook til å ringe til Discord for å si fra om bygget vårt gikk bra eller ikke. I URLen ligger det et token som vi ikke ønsker å sjekke inn i kode. Vi kan registrere denne verdien som en secret i GitHub, og den vil derfra være beskyttet.
 
-URL blir tilgjengelig under workshop (f.eks. via Discord). Er denne ikke tilgjengeliggjort enda, så rop ut. Vi ønsker ikke at denne skal ligge innsjekket i repositoriet her, for å unngå misbruk. 
+URL blir tilgjengelig under workshop (f.eks. via Discord). Er denne ikke tilgjengeliggjort enda, så rop ut. Vi ønsker ikke at denne skal ligge innsjekket i repositoriet her, for å unngå misbruk. Du kan naturligvis også teste med din egen Discord server!
 
 ## 8.1 - Legg inn secret i GitHub
 
 :pencil2: Gå til GitHub-repoet ditt -> Settings -> Secrets and variables -> Actions -> New repository secret.
 
 :pencil2: Opprett en secret:
+
 - Name: `WEBHOOK_URL`
 - Value: (Lim inn hele URL-en)
 
@@ -23,6 +24,7 @@ Vi utvider workflowen fra oppgave 7 slik at den kaller webhooken etter et vellyk
 :pencil2: Utvid workflow-filen du jobbet på tidligere, `.github/workflows/frontend-build.yml`, slik at den etter bygg, test og audit kaller webhooken.
 
 Eksempel (tillegg nederst i eksisterende job):
+
 ```yaml
       - name: Call webhook (POST)
         env:
@@ -33,20 +35,21 @@ Eksempel (tillegg nederst i eksisterende job):
             "$WEBHOOK_URL"
 ```
 
-Her henter vi secret fra Github sin secret storage og setter den i en miljøvariabel i jobb-steget, for så å bruke URL'en til å curl'e et endepunkt (curl er et vanlig brukt terminal-program for å utføre HTTP-kall). `GITHUB_REPOSITORY` er en miljøvariabel Github Actions alltid setter, med navnet på repoet (`eier/repo`).
+Her henter vi secret fra GitHub sin secret storage og setter den i en miljøvariabel i jobb-steget, for så å bruke URLen til å curle et endepunkt (curl er et vanlig brukt terminal-program for å utføre HTTP-kall). `GITHUB_REPOSITORY` er en miljøvariabel GitHub Actions alltid setter, med navnet på repoet (`<eier>/<repo>`).
 
 :bulb: Merk at JSON-teksten står i doble anførselstegn (`"`). Hadde vi brukt enkle anførselstegn (`'`), ville ikke shellet byttet ut `$GITHUB_REPOSITORY` med verdien, og Discord hadde vist den bokstavelige teksten `$GITHUB_REPOSITORY`.
 
-:pencil2: Åpne / oppdater en PR og sjekk workflow-loggen. Verifiser at du ikke ser URL med hemmelighet i loggene. 
+:pencil2: Åpne / oppdater en PR og sjekk workflow-loggen. Verifiser at du ikke ser URL med hemmelighet i loggene.
 
-:pencil2: Prøv å legge til et steg som kjører `echo "$WEBHOOK_URL"` (med `env` satt som over). Sjekk loggen. Github maskerer verdien av secrets i loggene, så du skal kun se `***`. Fjern steget igjen etterpå. Det er likevel ikke lurt å stole på maskeringen alene: den virker kun på eksakt verdi, så en secret som blir kodet om (f.eks. base64) vil vises i klartekst.
+:pencil2: Prøv å legge til et steg som kjører `echo "$WEBHOOK_URL"` (med `env` satt som over). Sjekk loggen. GitHub maskerer verdien av secrets i loggene, så du skal kun se `***`. Fjern steget igjen etterpå. Det er likevel ikke lurt å stole på maskeringen alene: den virker kun på eksakt verdi, så en secret som blir kodet om (f.eks. base64) vil vises i klartekst.
 
 ## 8.3 - Bonus: Skriv CI-status tilbake til Discord
 
-:pencil2: 
+:pencil2:
+
 - Dersom bygg, audit og test går igjennom, bruk webhook til å melde til Discord at pipeline vår er grønn. (Build status: ✅)
 - Dersom noe feiler, enten bygg, test eller audit, skriv tilbake at bygget har feilet (Build status: ❌)
 
-Her krever det litt googling i dokumentasjonen til Github Actions. Prøv å sette dette sammen selv. Tips: se på `if:` på et steg, og funksjonene `success()` og `failure()`.
+Her krever det litt googling i dokumentasjonen til GitHub Actions. Prøv å sette dette sammen selv. Tips: se på `if:` på et steg, og funksjonene `success()` og `failure()`.
 
 Du er nå ferdig med workshopen. Veldig bra jobba!
